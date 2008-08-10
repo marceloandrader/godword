@@ -88,6 +88,7 @@ static sqlite3_stmt *obtainVerseText = nil;
 
 + (void) finalizeStatements {
     if (obtainNumVerses) sqlite3_finalize(obtainNumVerses);
+	if (obtainVerseText) sqlite3_finalize(obtainVerseText);
 }
 
 @end

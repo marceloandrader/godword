@@ -14,14 +14,18 @@
 	sqlite3 *connection;
 	NSMutableArray *booksFromOld;
 	NSMutableArray *booksFromNew;
+	NSMutableArray *bookmarkFolders;
 }
 
 @property (nonatomic, retain) NSMutableArray *booksFromOld;
 @property (nonatomic, retain) NSMutableArray *booksFromNew;
+@property (nonatomic, retain) NSMutableArray *bookmarkFolders;
 
 - (void) createEditableCopyOfDatabaseIfNeeded ;
 
 - (void) initializeDatabase;
+
+- (void) initializeBookmarkFolders;
 
 - (int) obtainNumVersesInBook:(Book *) book 
 					inChapter:(int) chapter;

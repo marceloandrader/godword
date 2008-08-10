@@ -23,5 +23,5 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
 - (float) heightForLength:(int) length ;
--(void)dismiss:sender;
+-(void)dismiss;
 @end

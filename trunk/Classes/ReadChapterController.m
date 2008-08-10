@@ -172,32 +172,33 @@
 		AddBookmarkController *bookmarkController = [[AddBookmarkController alloc] 
 													 initWithNibName:@"AddBookmark" 
 													 bundle:[NSBundle mainBundle]];
-		
-//		UINavigationController *navigationController = [[UINavigationController alloc] 
-//															  initWithRootViewController:bookmarkController];
-//		UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] 
-//										  initWithTitle:@"Back"
-//										  style:UIBarButtonItemStyleBordered
-//										  target:self 
-//										  action:@selector(dismiss)];
-//		
-//		navigationController.title = @"Folders";
-//		navigationController.navigationItem.rightBarButtonItem = dismissButton;
+		bookmarkController.navigationItem.title = @"Bookmark Folders";
+		UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] 
+										  initWithTitle:@"Back"
+										  style:UIBarButtonItemStyleBordered
+										  target:self 
+										  action:@selector(dismiss)];
 		
 		
-		[self presentModalViewController:bookmarkController
-								animated:TRUE];
+		bookmarkController.navigationItem.leftBarButtonItem = dismissButton;
+		[dismissButton release];		
 		
+		UINavigationController *navigationController = [[UINavigationController alloc] 
+														initWithRootViewController:bookmarkController];
 		[bookmarkController release];
-//		[dismissButton release];
-//		[navigationController release];
+		
+		
+		[self presentModalViewController:navigationController
+								animated:YES];
+
+		[navigationController release];
 	} else if (buttonIndex == 1) {
 		//Note
 		NSLog(@"annotating %d", rowTapped);
 	}
 }
 
--(void)dismiss:sender
+-(void)dismiss
 {
 	[self dismissModalViewControllerAnimated:TRUE];
 }

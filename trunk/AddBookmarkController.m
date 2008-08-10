@@ -7,7 +7,10 @@
 //
 
 #import "AddBookmarkController.h"
-
+#import "BookmarkFolder.h"
+#import "GodWordAppDelegate.h"
+#import "BibleDatabase.h"
+#import "AddBookmarkItemController.h"
 
 @implementation AddBookmarkController
 
@@ -19,19 +22,18 @@
 }
 
 /*
- Implement loadView if you want to create a view hierarchy programmatically
+ Implement loadView if you want to create a view hierarchy programmatically 
 - (void)loadView {
+
 }
  */
 
 /*
- If you need to do additional setup after loading the view, override viewDidLoad.*/
+ If you need to do additional setup after loading the view, override viewDidLoad.
 - (void)viewDidLoad {
-	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(dismiss:)];
-	self.navigationController.navigationItem.rightBarButtonItem = item;
-	[item release];
+
 }
- 
+*/ 
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -58,8 +60,11 @@
 	UITableViewCell *cell = (UITableViewCell*) [tableView dequeueReusableCellWithIdentifier:@"BookmarkCell"];
 	if (cell == nil) {
 		cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"BookmarkCell"];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;	
 	}
-	cell.text = @"Bookmark Folder";
+	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+	BookmarkFolder *bookmarFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath row]];
+	cell.text = bookmarFolder.title;
 	return cell;
 }
 
@@ -71,15 +76,18 @@
 - (NSInteger) tableView:(UITableView *) tableView 
   numberOfRowsInSection:(NSInteger) section 
 {
-	return 10;
+	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+	return [appDelegate.bible.bookmarkFolders count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-}
+	AddBookmarkItemController *addBookmarkItemController = [[[AddBookmarkItemController alloc] 
+														  initWithNibName:@"AddBookmarkItem" 
+														  bundle:[NSBundle mainBundle]] autorelease];
+	
+	[[self navigationController] pushViewController:addBookmarkItemController animated:YES];
 
-- (void) dismiss:sender{
-	[self dismissModalViewControllerAnimated:TRUE];
 }
 
 

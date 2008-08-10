@@ -23,6 +23,9 @@
 		8D6F6DF80E3AAE2B001CD57E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6F6DF70E3AAE2B001CD57E /* CoreGraphics.framework */; };
 		8D731F770E33EE9A0031200B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D731F760E33EE9A0031200B /* Icon.png */; };
 		8D7320700E3403010031200B /* FindButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D73206F0E3403010031200B /* FindButton.png */; };
+		8D7503810E4E846300BF500F /* BookmarkFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7503800E4E846300BF500F /* BookmarkFolder.m */; };
+		8D7503FA0E4E8B2100BF500F /* AddBookmarkItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7503F90E4E8B2100BF500F /* AddBookmarkItem.xib */; };
+		8D7504000E4E8C5500BF500F /* AddBookmarkItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */; };
 		8D7593410E3FF84000BD8777 /* VerseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7593400E3FF84000BD8777 /* VerseCell.m */; };
 		8D7B59A10E4A8EE4005DA8D9 /* ReadChapter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */; };
 		8DDCE7F80E36C93500ECAF65 /* Bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCE7F70E36C93500ECAF65 /* Bookmark.png */; };
@@ -59,6 +62,11 @@
 		8D6F6DF70E3AAE2B001CD57E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8D731F760E33EE9A0031200B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		8D73206F0E3403010031200B /* FindButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FindButton.png; sourceTree = "<group>"; };
+		8D75037F0E4E846300BF500F /* BookmarkFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkFolder.h; path = Classes/BookmarkFolder.h; sourceTree = "<group>"; };
+		8D7503800E4E846300BF500F /* BookmarkFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkFolder.m; path = Classes/BookmarkFolder.m; sourceTree = "<group>"; };
+		8D7503F90E4E8B2100BF500F /* AddBookmarkItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddBookmarkItem.xib; path = ibresources/AddBookmarkItem.xib; sourceTree = "<group>"; };
+		8D7503FE0E4E8C5500BF500F /* AddBookmarkItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddBookmarkItemController.h; path = Classes/AddBookmarkItemController.h; sourceTree = "<group>"; };
+		8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBookmarkItemController.m; path = Classes/AddBookmarkItemController.m; sourceTree = "<group>"; };
 		8D75933F0E3FF84000BD8777 /* VerseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerseCell.h; sourceTree = "<group>"; };
 		8D7593400E3FF84000BD8777 /* VerseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerseCell.m; sourceTree = "<group>"; };
 		8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadChapter.xib; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				8DFDA0FE0E4942AF0049F120 /* AddBookmark.xib */,
 				8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */,
+				8D7503F90E4E8B2100BF500F /* AddBookmarkItem.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -159,6 +168,8 @@
 				8D51C64B0E341202004F21B9 /* ReadChapterController.m */,
 				8D75933F0E3FF84000BD8777 /* VerseCell.h */,
 				8D7593400E3FF84000BD8777 /* VerseCell.m */,
+				8D7503FE0E4E8C5500BF500F /* AddBookmarkItemController.h */,
+				8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +185,8 @@
 				8D51C6130E340FBD004F21B9 /* Book.m */,
 				8DDCE8070E36CD1100ECAF65 /* Verse.h */,
 				8DDCE8080E36CD1100ECAF65 /* Verse.m */,
+				8D75037F0E4E846300BF500F /* BookmarkFolder.h */,
+				8D7503800E4E846300BF500F /* BookmarkFolder.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -230,6 +243,7 @@
 				8DDCE7FF0E36CAC200ECAF65 /* Notes.png in Resources */,
 				8DFDA0FF0E4942AF0049F120 /* AddBookmark.xib in Resources */,
 				8D7B59A10E4A8EE4005DA8D9 /* ReadChapter.xib in Resources */,
+				8D7503FA0E4E8B2100BF500F /* AddBookmarkItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +264,8 @@
 				8DDCE8090E36CD1100ECAF65 /* Verse.m in Sources */,
 				8D7593410E3FF84000BD8777 /* VerseCell.m in Sources */,
 				8DFDA1030E4943500049F120 /* AddBookmarkController.m in Sources */,
+				8D7503810E4E846300BF500F /* BookmarkFolder.m in Sources */,
+				8D7504000E4E8C5500BF500F /* AddBookmarkItemController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

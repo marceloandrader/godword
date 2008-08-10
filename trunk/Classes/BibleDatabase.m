@@ -8,12 +8,11 @@
 
 #import "BibleDatabase.h"
 #import "Book.h"
-
-
+#import "BookmarkFolder.h"
 
 @implementation BibleDatabase
 
-@synthesize booksFromOld, booksFromNew;
+@synthesize booksFromOld, booksFromNew, bookmarkFolders;
 
 - (void)createEditableCopyOfDatabaseIfNeeded {
     BOOL success;
@@ -59,7 +58,6 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"bible.db"];
     if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
-//        const char *sql = "SELECT id, name, testament FROM books";
 		const char *sql = "select id,name,testament,(select max(chapter_no) from verses v where v.book_id = b.id) from books b where id in (select distinct book_id from verses)";
         sqlite3_stmt *statement;
         if (sqlite3_prepare_v2(connection, sql, -1, &statement, NULL) == SQLITE_OK) {
@@ -83,6 +81,36 @@
     }
 }
 
+- (void) initializeBookmarkFolders
+{
+	NSMutableArray *folders = [[NSMutableArray alloc] init];
+    self.bookmarkFolders = folders;
+    [folders release];
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"bible.db"];
+    if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
+		const char *sql = "select * from folders";
+        sqlite3_stmt *statement;
+        if (sqlite3_prepare_v2(connection, sql, -1, &statement, NULL) == SQLITE_OK) {
+            while (sqlite3_step(statement) == SQLITE_ROW) {
+				NSInteger pk = sqlite3_column_int(statement, 0);
+				NSString *folderTitle = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+				
+				BookmarkFolder *bookmarkFoler = [[BookmarkFolder alloc] initWithPrimaryKey:pk 
+																			   title:folderTitle];
+				[bookmarkFolders addObject:bookmarkFoler];
+                [bookmarkFoler release];
+            }
+        }
+        sqlite3_finalize(statement);
+    } else {
+        sqlite3_close(connection);
+        NSAssert1(0, @"Failed to open database with message '%s'.", sqlite3_errmsg(connection));
+    }
+	
+}
 
 - (int) obtainNumVersesInBook:(Book *) book inChapter:(int) chapter
 {
