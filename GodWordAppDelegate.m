@@ -21,6 +21,7 @@
 	[db release];
 	[bible createEditableCopyOfDatabaseIfNeeded];
 	[bible initializeDatabase];
+	[bible initializeBookmarkFolders];
 	Verse *verse = [[[Verse alloc] init] retain];
 	verseSelected = verse;
 	[verse release];
