@@ -11,6 +11,7 @@
 #import "GodWordAppDelegate.h"
 #import "BibleDatabase.h"
 #import "AddBookmarkItemController.h"
+#import "Verse.h"
 
 @implementation AddBookmarkController
 
@@ -85,7 +86,11 @@
 	AddBookmarkItemController *addBookmarkItemController = [[[AddBookmarkItemController alloc] 
 														  initWithNibName:@"AddBookmarkItem" 
 														  bundle:[NSBundle mainBundle]] autorelease];
-	
+	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+	BookmarkFolder *bookmarFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath row]];
+
+	addBookmarkItemController.folder = bookmarFolder.pk;
+	addBookmarkItemController.navigationItem.title = @"Add Bookmark";
 	[[self navigationController] pushViewController:addBookmarkItemController animated:YES];
 
 }

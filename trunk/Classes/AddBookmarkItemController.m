@@ -7,13 +7,19 @@
 //
 
 #import "AddBookmarkItemController.h"
-
+#import "GodWordAppDelegate.h"
+#import "Bookmark.h"
+#import "Verse.h"
+#import "BibleDatabase.h"
 
 @implementation AddBookmarkItemController
+
+@synthesize folder;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// Initialization code
+		
 	}
 	return self;
 }
@@ -25,10 +31,13 @@
  */
 
 /*
- If you need to do additional setup after loading the view, override viewDidLoad.
+ If you need to do additional setup after loading the view, override viewDidLoad. */
 - (void)viewDidLoad {
+	[self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+	GodWordAppDelegate *delegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
+	verse.text = delegate.verseSelected.text;
 }
- */
+ 
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -50,8 +59,22 @@
 
 - (IBAction) addBookmark: (id) sender
 {
-	NSLog(@"agregando bookmark %@", description.text);
+	GodWordAppDelegate *delegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
+	Bookmark * bookmark = [[Bookmark alloc] initWithPrimaryKey:0 description:[description text] verse:delegate.verseSelected.verseId folder:self.folder ];
+	[delegate.bible saveBookmark:bookmark];
 	[[self navigationController] popViewControllerAnimated:YES];
+}
+
+
+- (IBAction) finishEditing: (id) sender
+{
+	[description resignFirstResponder];
+	if ([[description text] length] > 0) {
+		[save setEnabled:TRUE];
+	} else {
+		[save setEnabled:FALSE];
+	}
+
 }
 
 @end
