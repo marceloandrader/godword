@@ -11,8 +11,15 @@
 
 @interface AddBookmarkItemController : UIViewController {
 	IBOutlet UITextField * description;
+	IBOutlet UILabel * verse;
+	IBOutlet UIButton * save;
+	NSInteger folder;
 }
 
+@property(nonatomic, assign) NSInteger folder;
+
 - (IBAction) addBookmark: (id) sender;
+
+- (IBAction) finishEditing: (id) sender;
 
 @end

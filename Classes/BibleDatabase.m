@@ -9,6 +9,8 @@
 #import "BibleDatabase.h"
 #import "Book.h"
 #import "BookmarkFolder.h"
+#import "Bookmark.h"
+#import "Verse.h"
 
 @implementation BibleDatabase
 
@@ -120,6 +122,16 @@
 - (NSString*) obtainTextVerseInBook:(Book *) book inChapter:(int) chapter inVerse:(int) verse
 {
 	return [book obtainVerseTextWithChapter:chapter verseNumber:verse connection:connection];
+}
+
+- (void) saveBookmark:(Bookmark *) bookmark
+{
+	[bookmark saveWithDatabase:connection];
+}
+
+- (void) refreshVerseId:(Verse*) verse
+{
+	[verse obtainVerseIdWithConnection:connection];
 }
 
 

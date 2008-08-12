@@ -28,6 +28,7 @@
 		8D7504000E4E8C5500BF500F /* AddBookmarkItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */; };
 		8D7593410E3FF84000BD8777 /* VerseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7593400E3FF84000BD8777 /* VerseCell.m */; };
 		8D7B59A10E4A8EE4005DA8D9 /* ReadChapter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */; };
+		8D8958910E5114BB00BFF4DA /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8958900E5114BB00BFF4DA /* Bookmark.m */; };
 		8DDCE7F80E36C93500ECAF65 /* Bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCE7F70E36C93500ECAF65 /* Bookmark.png */; };
 		8DDCE7FB0E36CA8500ECAF65 /* Devotional.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCE7FA0E36CA8500ECAF65 /* Devotional.png */; };
 		8DDCE7FF0E36CAC200ECAF65 /* Notes.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCE7FE0E36CAC200ECAF65 /* Notes.png */; };
@@ -70,6 +71,8 @@
 		8D75933F0E3FF84000BD8777 /* VerseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerseCell.h; sourceTree = "<group>"; };
 		8D7593400E3FF84000BD8777 /* VerseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerseCell.m; sourceTree = "<group>"; };
 		8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadChapter.xib; sourceTree = "<group>"; };
+		8D89588F0E5114BB00BFF4DA /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bookmark.h; path = Classes/Bookmark.h; sourceTree = "<group>"; };
+		8D8958900E5114BB00BFF4DA /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bookmark.m; path = Classes/Bookmark.m; sourceTree = "<group>"; };
 		8DDCE7F70E36C93500ECAF65 /* Bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bookmark.png; sourceTree = "<group>"; };
 		8DDCE7FA0E36CA8500ECAF65 /* Devotional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Devotional.png; sourceTree = "<group>"; };
 		8DDCE7FE0E36CAC200ECAF65 /* Notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Notes.png; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				8DDCE8080E36CD1100ECAF65 /* Verse.m */,
 				8D75037F0E4E846300BF500F /* BookmarkFolder.h */,
 				8D7503800E4E846300BF500F /* BookmarkFolder.m */,
+				8D89588F0E5114BB00BFF4DA /* Bookmark.h */,
+				8D8958900E5114BB00BFF4DA /* Bookmark.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				8DFDA1030E4943500049F120 /* AddBookmarkController.m in Sources */,
 				8D7503810E4E846300BF500F /* BookmarkFolder.m in Sources */,
 				8D7504000E4E8C5500BF500F /* AddBookmarkItemController.m in Sources */,
+				8D8958910E5114BB00BFF4DA /* Bookmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 #import <sqlite3.h>
 
 @class Book;
+@class Bookmark;
+@class Verse;
 
 @interface BibleDatabase : NSObject {
 	sqlite3 *connection;
@@ -33,5 +35,9 @@
 - (NSString*) obtainTextVerseInBook:(Book *) book 
 					inChapter:(int) chapter 
 					  inVerse:(int) verse;
+
+- (void) saveBookmark:(Bookmark *) bookmark; 
+
+- (void) refreshVerseId:(Verse*) verse;
 
 @end

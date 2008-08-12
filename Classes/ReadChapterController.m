@@ -47,7 +47,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
-	//return YES;
 }
 
 
@@ -153,6 +152,10 @@
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
 	rowTapped = [indexPath row];
+	GodWordAppDelegate * delegate = (GodWordAppDelegate*) [[UIApplication sharedApplication] delegate];
+	delegate.verseSelected.verseNumber = rowTapped + 1;
+	[delegate.bible refreshVerseId:delegate.verseSelected];
+	
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Save this verse to:"
 															 delegate:self cancelButtonTitle:nil		
 											   destructiveButtonTitle:nil
@@ -168,6 +171,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
 	if (buttonIndex == 0){
 		//Bookmark
+		
 		NSLog(@"bookmarking %d", rowTapped);
 		AddBookmarkController *bookmarkController = [[AddBookmarkController alloc] 
 													 initWithNibName:@"AddBookmark" 
