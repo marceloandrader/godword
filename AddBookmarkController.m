@@ -86,10 +86,7 @@
 	AddBookmarkItemController *addBookmarkItemController = [[[AddBookmarkItemController alloc] 
 														  initWithNibName:@"AddBookmarkItem" 
 														  bundle:[NSBundle mainBundle]] autorelease];
-	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	BookmarkFolder *bookmarFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath row]];
-
-	addBookmarkItemController.folder = bookmarFolder.pk;
+	addBookmarkItemController.rowFolder = [indexPath row];
 	addBookmarkItemController.navigationItem.title = @"Add Bookmark";
 	[[self navigationController] pushViewController:addBookmarkItemController animated:YES];
 

@@ -26,6 +26,8 @@
 
 - (void) obtainVerseIdWithConnection: (sqlite3*) database;
 
+- (void) obtainVerseFromVerseId:(NSInteger) verseId withConnection:(sqlite3 *) database;
+
 + (void) finalizeStatements;
 
 @end

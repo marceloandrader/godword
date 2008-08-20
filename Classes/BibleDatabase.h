@@ -40,4 +40,6 @@
 
 - (void) refreshVerseId:(Verse*) verse;
 
+- (void) refreshVerseFromVerseId:(NSInteger) verseId verse:(Verse *) verse;
+
 @end

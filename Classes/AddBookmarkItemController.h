@@ -13,10 +13,10 @@
 	IBOutlet UITextField * description;
 	IBOutlet UILabel * verse;
 	IBOutlet UIButton * save;
-	NSInteger folder;
+	NSInteger rowFolder;
 }
 
-@property(nonatomic, assign) NSInteger folder;
+@property(nonatomic, assign) NSInteger rowFolder;
 
 - (IBAction) addBookmark: (id) sender;
 

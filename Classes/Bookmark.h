@@ -14,17 +14,20 @@
 	NSInteger pk;
 	NSInteger folder;
 	NSInteger verse;
+	NSString *verseNo;
 }
 
 @property(assign, nonatomic) NSInteger pk;
 @property(copy, nonatomic) NSString *description;
 @property(assign, nonatomic) NSInteger folder;
 @property(assign, nonatomic) NSInteger verse;
+@property(nonatomic,copy) NSString * verseNo;
 
 - (id) initWithPrimaryKey: (NSInteger)  primaryKey 
 			  description: (NSString *) bookmarkDescription 
 					verse: (NSInteger) verseId
-				   folder: (NSInteger) bookmarkFolder;
+				   folder: (NSInteger) bookmarkFolder
+				  verseNo: (NSString*) verseNo;
 
 - (void) saveWithDatabase: (sqlite3 *) database ;
 

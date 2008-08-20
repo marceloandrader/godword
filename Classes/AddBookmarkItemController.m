@@ -9,12 +9,14 @@
 #import "AddBookmarkItemController.h"
 #import "GodWordAppDelegate.h"
 #import "Bookmark.h"
+#import "Book.h"
+#import "BookmarkFolder.h"
 #import "Verse.h"
 #import "BibleDatabase.h"
 
 @implementation AddBookmarkItemController
 
-@synthesize folder;
+@synthesize rowFolder;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -59,9 +61,21 @@
 
 - (IBAction) addBookmark: (id) sender
 {
-	GodWordAppDelegate *delegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
-	Bookmark * bookmark = [[Bookmark alloc] initWithPrimaryKey:0 description:[description text] verse:delegate.verseSelected.verseId folder:self.folder ];
-	[delegate.bible saveBookmark:bookmark];
+	GodWordAppDelegate *appDelegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
+	BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:self.rowFolder];
+	Book* book ;
+	if (appDelegate.verseSelected.testament == 0 )
+		book = (Book*) [appDelegate.bible.booksFromOld 
+						objectAtIndex: appDelegate.verseSelected.bookNumber];
+	else
+		book = (Book*) [appDelegate.bible.booksFromNew 
+						objectAtIndex: appDelegate.verseSelected.bookNumber];
+	
+	NSString * verseNo = [[NSString alloc] initWithFormat:@"%@ %d:%d", book.title, appDelegate.verseSelected.chapterNumber , appDelegate.verseSelected.verseNumber];
+	
+	Bookmark * bookmark = [[Bookmark alloc] initWithPrimaryKey:0 description:[description text] verse:appDelegate.verseSelected.verseId folder:bookmarkFolder.pk verseNo:verseNo];
+	[bookmarkFolder.bookmarks addObject:bookmark];
+	[appDelegate.bible saveBookmark:bookmark];
 	[[self navigationController] popViewControllerAnimated:YES];
 }
 

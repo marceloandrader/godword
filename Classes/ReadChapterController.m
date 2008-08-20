@@ -24,7 +24,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// Initialization code
-		NSLog(@"initWithNibName read chapter");
+		self.title = @"Read";
+		self.tabBarItem.image = [UIImage imageNamed:@"Notes.png"];
 	}
 	return self;
 }

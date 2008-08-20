@@ -12,13 +12,13 @@
 #import "BibleDatabase.h"
 #import "Book.h"
 #import "Verse.h"
+#import <UIKit/UITableView.h>
 
 @implementation FindVerseController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// Initialization code
-		
 	}
 	return self;
 }
@@ -33,6 +33,7 @@
  If you need to do additional setup after loading the view, override viewDidLoad.*/
 - (void)viewDidLoad {
 	[self view].backgroundColor = [UIColor groupTableViewBackgroundColor];
+		
 }
  
 
@@ -53,6 +54,20 @@
 	[super dealloc];
 }
 
+
+- (void) setVerse
+{
+	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[testamentChooser setSelectedSegmentIndex:appDelegate.verseSelected.testament];
+	[versePicker selectRow:appDelegate.verseSelected.bookNumber inComponent:0 animated:NO];
+	[versePicker selectRow:(appDelegate.verseSelected.chapterNumber-1) inComponent:1 animated:NO];
+	[versePicker selectRow:(appDelegate.verseSelected.verseNumber) inComponent:2 animated:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[self setVerse];
+}
 
 #pragma mark 
 #pragma mark Methods for UIPickerViewDelegate
@@ -173,9 +188,13 @@
 	appDelegate.verseSelected.verseNumber   = [versePicker selectedRowInComponent:2] + 1;
 	appDelegate.tabBarController.selectedIndex = 1;
 	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table reloadData];
-	NSIndexPath* indexPath = [[[NSIndexPath alloc] indexPathByAddingIndex:0] indexPathByAddingIndex:[versePicker selectedRowInComponent:2] ];
-
+	
+	NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[versePicker selectedRowInComponent:2] inSection:0];
+							  
 	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:false];
+	
+	[indexPath release];
+
 }
 
 - (IBAction) changeTestament: (id) sender

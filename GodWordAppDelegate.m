@@ -10,6 +10,9 @@
 #import "BibleDatabase.h"
 #import "Book.h"
 #import "Verse.h"
+#import "FindVerseController.h"
+#import "ReadChapterController.h"
+#import "BookmarkListController.h"
 
 @implementation GodWordAppDelegate
 
@@ -23,9 +26,12 @@
 	[bible initializeDatabase];
 	[bible initializeBookmarkFolders];
 	Verse *verse = [[[Verse alloc] init] retain];
+	//cambiar cuando se guarde donde se quedo
+	[bible refreshVerseFromVerseId:10 verse:verse];
 	verseSelected = verse;
 	[verse release];
-	[window addSubview: [tabBarController view]];
+	
+	[window addSubview: tabBarController.view];
 	[window makeKeyAndVisible];
 }
 
