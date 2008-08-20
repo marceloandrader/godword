@@ -17,6 +17,8 @@
 
 - (Book *) bookAtTestament:(int) testament inRow:(int) row;
 
+- (void) setVerse;
+
 - (IBAction) searchVerse: (id) sender;
 - (IBAction) changeTestament: (id) sender;
 

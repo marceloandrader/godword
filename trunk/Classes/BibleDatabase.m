@@ -100,10 +100,11 @@
 				NSInteger pk = sqlite3_column_int(statement, 0);
 				NSString *folderTitle = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
 				
-				BookmarkFolder *bookmarkFoler = [[BookmarkFolder alloc] initWithPrimaryKey:pk 
+				BookmarkFolder *bookmarkFolder = [[BookmarkFolder alloc] initWithPrimaryKey:pk 
 																			   title:folderTitle];
-				[bookmarkFolders addObject:bookmarkFoler];
-                [bookmarkFoler release];
+				[bookmarkFolder refreshBookmarksWithDatabase:connection];
+				[bookmarkFolders addObject:bookmarkFolder];
+                [bookmarkFolder release];
             }
         }
         sqlite3_finalize(statement);
@@ -132,6 +133,11 @@
 - (void) refreshVerseId:(Verse*) verse
 {
 	[verse obtainVerseIdWithConnection:connection];
+}
+
+- (void) refreshVerseFromVerseId:(NSInteger) verseId verse:(Verse *) verse
+{
+	[verse obtainVerseFromVerseId:verseId withConnection:connection];
 }
 
 

@@ -14,18 +14,20 @@ static sqlite3_stmt *insertBookmark = nil;
 
 @implementation Bookmark
 
-@synthesize pk, description, verse, folder;
+@synthesize pk, description, verse, folder,verseNo;
 
 - (id) initWithPrimaryKey: (NSInteger)  primaryKey 
 			  description: (NSString *) bookmarkDescription 
 					verse: (NSInteger) verseId
 				   folder: (NSInteger) bookmarkFolder
+				  verseNo: (NSString*) verseName
 {
 	if ( self = [super init] ) {		
 		self.pk = primaryKey;
 		self.description = bookmarkDescription;
 		self.verse = verseId;
 		self.folder = bookmarkFolder;
+		self.verseNo = verseName;
 	}
 	return self;
 }

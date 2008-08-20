@@ -1,33 +1,44 @@
 //
-//  MainWindowController.m
+//  BookmarkList.m
 //  GodWord
 //
-//  Created by Marcelo Andrade on 7/20/08.
+//  Created by Marcelo Andrade on 8/14/08.
 //  Copyright 2008 Casa. All rights reserved.
 //
 
-#import "MainWindowController.h"
+#import "BookmarkListController.h"
+#import "BookmarkGroupListController.h"
 
-
-@implementation MainWindowController
+@implementation BookmarkListController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// Initialization code
-	}
+		NSLog(@"initWithNibName");
+	};
 	return self;
 }
 
 /*
- Implement loadView if you want to create a view hierarchy programmatically
+ Implement loadView if you want to create a view hierarchy programmatically  */
 - (void)loadView {
+	
+	BookmarkGroupListController * bookmarkGroupListController = [[BookmarkGroupListController alloc] initWithNibName:nil bundle:nil];
+	
+	UINavigationController *navControler = [[UINavigationController alloc] initWithRootViewController:bookmarkGroupListController];
+	bookmarkGroupListController.navigationItem.title = @"Bookmarks";
+	
+	[bookmarkGroupListController release];
+	
+	self.view = navControler.view;
+	
 }
- */
+
 
 /*
  If you need to do additional setup after loading the view, override viewDidLoad.
-- (void)viewDidLoad {
-}
+ - (void)viewDidLoad {
+ }
  */
 
 
@@ -45,12 +56,6 @@
 
 - (void)dealloc {
 	[super dealloc];
-}
-
-#pragma mark Implement UITabBarDelegate
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-	
 }
 
 @end

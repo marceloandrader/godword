@@ -32,7 +32,7 @@
 		verseText.lineBreakMode = UILineBreakModeWordWrap;
 		verseText.numberOfLines = 20;
 		verseText.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-		verseText.multipleTouchEnabled = true;
+//		verseText.multipleTouchEnabled = true;
 		[self.contentView addSubview:verseText];
 		self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;		
 	}
@@ -57,8 +57,7 @@
 - (void) layoutSubviews {
 	[super layoutSubviews];
     CGRect baseRect = CGRectInset(self.contentView.bounds, 1, 1);
-    CGRect rect = baseRect;
-    verseText.frame = rect;
+    verseText.frame = baseRect;
 }
 
 
