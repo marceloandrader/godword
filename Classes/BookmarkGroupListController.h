@@ -14,6 +14,6 @@
 	
 }
 
-@property(nonatomic,assign) UITableView *table;
+@property(nonatomic, retain) UITableView *table;
 
 @end

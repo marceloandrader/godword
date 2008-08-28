@@ -11,6 +11,9 @@
 #import <sqlite3.h>
 
 static sqlite3_stmt *obtainBookmarks = nil;
+static sqlite3_stmt *insertFolder = nil;
+static sqlite3_stmt *updateFolder = nil;
+static sqlite3_stmt *deleteFolder = nil;
 
 @implementation BookmarkFolder
 
@@ -22,6 +25,9 @@ static sqlite3_stmt *obtainBookmarks = nil;
 	if ( self = [super init] ) {		
 		self.pk = primaryKey;
 		self.title = folderTitle;
+		NSMutableArray *bookmarkArray = [[NSMutableArray alloc] init];
+		self.bookmarks = bookmarkArray;
+		[bookmarkArray release];
 	}
 	return self;
 }
@@ -62,8 +68,73 @@ static sqlite3_stmt *obtainBookmarks = nil;
 	
 }
 
+- (void) insertWithDatabase: (sqlite3 *) database {
+	if (insertFolder == nil) {
+		static char *sql = "INSERT INTO folders (title) VALUES(?) ";
+		if (sqlite3_prepare_v2(database, sql, -1, &insertFolder, NULL) != SQLITE_OK) {
+			NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+		}
+	}
+	
+	sqlite3_bind_text(insertFolder, 1, [self.title UTF8String], -1, SQLITE_TRANSIENT);
+	
+	int success = sqlite3_step(insertFolder);
+	sqlite3_reset(insertFolder);
+	if (success != SQLITE_ERROR) {
+		self.pk = sqlite3_last_insert_rowid(database);
+	}
+	else
+	{
+		NSAssert1(0, @"Error: failed to insert into the database with message '%s'.", sqlite3_errmsg(database));
+		self.pk = -1;
+	}
+}
+
+- (void) deleteWithDatabase: (sqlite3 *) database {
+	if (deleteFolder == nil) {
+		static char *sql = "DELETE FROM folders WHERE folder_id = ? ";
+		if (sqlite3_prepare_v2(database, sql, -1, &deleteFolder, NULL) != SQLITE_OK) {
+			NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+		}
+	}
+	
+	sqlite3_bind_int(deleteFolder, 1, self.pk);
+	
+	int success = sqlite3_step(deleteFolder);
+	sqlite3_reset(deleteFolder);
+	if (success != SQLITE_ERROR) {
+		self.pk = 0;
+	}
+	else
+	{
+		NSAssert1(0, @"Error: failed to delete into the database with message '%s'.", sqlite3_errmsg(database));
+		self.pk = -1;
+	}
+}
+
+- (void) updateWithDatabase: (sqlite3 *) database {
+	if (updateFolder == nil) {
+		static char *sql = "UPDATE folders set title = ? where folder_id = ? ";
+		if (sqlite3_prepare_v2(database, sql, -1, &updateFolder, NULL) != SQLITE_OK) {
+			NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+		}
+	}
+	
+	sqlite3_bind_text(updateFolder, 1, [self.title UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_int(updateFolder, 2, self.pk);
+	
+	int success = sqlite3_step(updateFolder);
+	sqlite3_reset(updateFolder);
+	if (success == SQLITE_ERROR) {
+		NSAssert1(0, @"Error: failed to insert into the database with message '%s'.", sqlite3_errmsg(database));
+		self.pk = -1;
+	}
+}
 
 + (void) finalizeStatements {
+	if (updateFolder) sqlite3_finalize(updateFolder);
+	if (deleteFolder) sqlite3_finalize(deleteFolder);
+	if (insertFolder) sqlite3_finalize(insertFolder);
     if (obtainBookmarks) sqlite3_finalize(obtainBookmarks);
 }
 

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BookmarkGroupListController;
 
 @interface BookmarkListController : UIViewController{
-
+	BookmarkGroupListController * bookmarkGroupListController;
 }
 
 @end

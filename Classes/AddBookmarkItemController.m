@@ -73,9 +73,9 @@
 	
 	NSString * verseNo = [[NSString alloc] initWithFormat:@"%@ %d:%d", book.title, appDelegate.verseSelected.chapterNumber , appDelegate.verseSelected.verseNumber];
 	
-	Bookmark * bookmark = [[Bookmark alloc] initWithPrimaryKey:0 description:[description text] verse:appDelegate.verseSelected.verseId folder:bookmarkFolder.pk verseNo:verseNo];
-	[bookmarkFolder.bookmarks addObject:bookmark];
+	Bookmark * bookmark = [[[Bookmark alloc] initWithPrimaryKey:0 description:[description text] verse:appDelegate.verseSelected.verseId folder:bookmarkFolder.pk verseNo:verseNo] retain];
 	[appDelegate.bible saveBookmark:bookmark];
+	[bookmarkFolder.bookmarks addObject:bookmark];
 	[[self navigationController] popViewControllerAnimated:YES];
 }
 
