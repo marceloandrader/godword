@@ -24,6 +24,12 @@
 
 - (void) refreshBookmarksWithDatabase:(sqlite3 *) connection;
 
+- (void) insertWithDatabase: (sqlite3 *) database;
+
+- (void) deleteWithDatabase: (sqlite3 *) database;
+
+- (void) updateWithDatabase: (sqlite3 *) database;
+
 + (void) finalizeStatements;
 
 

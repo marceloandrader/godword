@@ -11,17 +11,20 @@
 @class Book;
 @class Bookmark;
 @class Verse;
+@class BookmarkFolder;
 
 @interface BibleDatabase : NSObject {
 	sqlite3 *connection;
 	NSMutableArray *booksFromOld;
 	NSMutableArray *booksFromNew;
 	NSMutableArray *bookmarkFolders;
+	NSMutableArray *devotionals;
 }
 
 @property (nonatomic, retain) NSMutableArray *booksFromOld;
 @property (nonatomic, retain) NSMutableArray *booksFromNew;
 @property (nonatomic, retain) NSMutableArray *bookmarkFolders;
+@property (nonatomic, retain) NSMutableArray *devotionals;
 
 - (void) createEditableCopyOfDatabaseIfNeeded ;
 
@@ -41,5 +44,15 @@
 - (void) refreshVerseId:(Verse*) verse;
 
 - (void) refreshVerseFromVerseId:(NSInteger) verseId verse:(Verse *) verse;
+
+- (void) deleteBookmark:(Bookmark*) bookmark;
+
+- (void) insertFolder:(BookmarkFolder *)folder;
+
+- (void) deleteFolder:(BookmarkFolder *)folder;
+
+- (void) updateFolder:(BookmarkFolder *)folder;
+
+- (void) initializeDevotionals;
 
 @end

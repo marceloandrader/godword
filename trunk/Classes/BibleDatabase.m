@@ -11,10 +11,11 @@
 #import "BookmarkFolder.h"
 #import "Bookmark.h"
 #import "Verse.h"
+#import "Devotional.h"
 
 @implementation BibleDatabase
 
-@synthesize booksFromOld, booksFromNew, bookmarkFolders;
+@synthesize booksFromOld, booksFromNew, bookmarkFolders, devotionals;
 
 - (void)createEditableCopyOfDatabaseIfNeeded {
     BOOL success;
@@ -140,5 +141,70 @@
 	[verse obtainVerseFromVerseId:verseId withConnection:connection];
 }
 
+- (void) deleteBookmark:(Bookmark*) bookmark {
+	[bookmark deleteWithDatabase:connection];
+}
+
+- (void) insertFolder:(BookmarkFolder *)folder {
+	[folder insertWithDatabase:connection];
+}
+
+- (void) deleteFolder:(BookmarkFolder *)folder{
+	[folder deleteWithDatabase:connection];
+}
+
+- (void) updateFolder:(BookmarkFolder *)folder{
+	[folder updateWithDatabase:connection];
+}
+
+- (void) initializeDevotionals
+{
+	NSMutableArray *folders = [[NSMutableArray alloc] init];
+    self.devotionals = folders;
+    [folders release];
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"bible.db"];
+    if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
+		const char *sql = "select d.*, v.chapter_no, v.verse_no, b.name from devotionals d, books b, verses v where d.verse = v.id and v.book_id = b.id ";
+        sqlite3_stmt *statement;
+        if (sqlite3_prepare_v2(connection, sql, -1, &statement, NULL) == SQLITE_OK) {
+            while (sqlite3_step(statement) == SQLITE_ROW) {
+				NSInteger pk = sqlite3_column_int(statement, 0);
+				NSString *title = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+				NSString *quest1 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
+				NSString *quest2 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
+				NSInteger verseId = sqlite3_column_int(statement, 4);
+				
+				NSDate *devDate = [NSDate dateWithTimeIntervalSince1970:sqlite3_column_double(statement, 5)];
+				
+				NSInteger chapter = sqlite3_column_int(statement, 6);
+				NSInteger verse = sqlite3_column_int(statement, 7);
+				NSString *bookName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 8)];
+				
+				NSString * verseNo = [[NSString alloc] initWithFormat:@"%@ %d:%d", bookName, chapter, verse];
+				
+				Devotional * devotional = [[Devotional alloc] init];
+				devotional.pk = pk;
+				devotional.title = title;
+				devotional.questionOne = quest1;
+				devotional.questionTwo = quest2;				
+				devotional.verse = verseId;
+				devotional.verseNo = verseNo;
+				devotional.date = devDate;
+				
+				[devotionals addObject:devotional];
+				
+                [devotional release];
+            }
+        }
+        sqlite3_finalize(statement);
+    } else {
+        sqlite3_close(connection);
+        NSAssert1(0, @"Failed to open database with message '%s'.", sqlite3_errmsg(connection));
+    }
+	
+}
 
 @end

@@ -33,7 +33,7 @@
 
 /* Implement loadView if you want to create a view hierarchy programmatically
  - (void)loadView {
-	 NSLog(@"load View read chapter");
+	 //NSLog(@"load View read chapter");
  }
 */
 
@@ -59,6 +59,11 @@
 
 - (void)dealloc {
 	[super dealloc];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[table reloadData];
 }
 
 #pragma mark UITableViewDelegate
@@ -101,7 +106,7 @@
 		book = (Book*) [appDelegate.bible.booksFromOld objectAtIndex: appDelegate.verseSelected.bookNumber];
 	else
 		book = (Book*) [appDelegate.bible.booksFromNew objectAtIndex: appDelegate.verseSelected.bookNumber];
-	NSLog(@"rows in section");
+	//NSLog(@"rows in section");
 	return [appDelegate.bible obtainNumVersesInBook:book inChapter:appDelegate.verseSelected.chapterNumber];
 }
 
@@ -146,10 +151,6 @@
 	return title;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	NSLog(@" verse selected %d", [indexPath row]);
-}
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
 	rowTapped = [indexPath row];
@@ -173,7 +174,7 @@
 	if (buttonIndex == 0){
 		//Bookmark
 		
-		NSLog(@"bookmarking %d", rowTapped);
+		//NSLog(@"bookmarking %d", rowTapped);
 		AddBookmarkController *bookmarkController = [[AddBookmarkController alloc] 
 													 initWithNibName:@"AddBookmark" 
 													 bundle:[NSBundle mainBundle]];
@@ -184,9 +185,16 @@
 										  target:self 
 										  action:@selector(dismiss)];
 		
+		UIBarButtonItem *editButton = [[UIBarButtonItem alloc] 
+									   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
+									   target:bookmarkController action:@selector(edit)];
+		
+		
 		
 		bookmarkController.navigationItem.leftBarButtonItem = dismissButton;
+		bookmarkController.navigationItem.rightBarButtonItem = editButton;
 		[dismissButton release];		
+		[editButton release];
 		
 		UINavigationController *navigationController = [[UINavigationController alloc] 
 														initWithRootViewController:bookmarkController];
@@ -199,7 +207,7 @@
 		[navigationController release];
 	} else if (buttonIndex == 1) {
 		//Note
-		NSLog(@"annotating %d", rowTapped);
+		//NSLog(@"annotating %d", rowTapped);
 	}
 }
 

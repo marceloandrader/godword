@@ -31,6 +31,8 @@
 
 - (void) saveWithDatabase: (sqlite3 *) database ;
 
+- (void) deleteWithDatabase: (sqlite3 *) database ;
+
 + (void) finalizeStatements;
 
 @end

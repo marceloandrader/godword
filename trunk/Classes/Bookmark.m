@@ -10,6 +10,7 @@
 #import <sqlite3.h>
 
 static sqlite3_stmt *insertBookmark = nil;
+static sqlite3_stmt *deleteBookmark = nil;
 
 
 @implementation Bookmark
@@ -57,7 +58,27 @@ static sqlite3_stmt *insertBookmark = nil;
 	}
 }
 
+- (void) deleteWithDatabase: (sqlite3 *) database {
+	if (deleteBookmark == nil) {
+		static char *sql = "DELETE FROM bookmarks WHERE id = ? ";
+		if (sqlite3_prepare_v2(database, sql, -1, &deleteBookmark, NULL) != SQLITE_OK) {
+			NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+		}
+	}
+	
+	sqlite3_bind_int(deleteBookmark, 1, self.pk);
+	
+	int success = sqlite3_step(deleteBookmark);
+	sqlite3_reset(deleteBookmark);
+	if (success == SQLITE_ERROR) {
+		NSAssert1(0, @"Error: failed to delete into the database with message '%s'.", sqlite3_errmsg(database));
+		self.pk = -1;
+	}
+}
+
+
 + (void) finalizeStatements {
+	if (deleteBookmark) sqlite3_finalize(deleteBookmark);
     if (insertBookmark) sqlite3_finalize(insertBookmark);
 }
 

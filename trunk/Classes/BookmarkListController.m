@@ -8,13 +8,14 @@
 
 #import "BookmarkListController.h"
 #import "BookmarkGroupListController.h"
+#import "GodWordAppDelegate.h"
+#import "BibleDatabase.h"
 
 @implementation BookmarkListController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// Initialization code
-		NSLog(@"initWithNibName");
 	};
 	return self;
 }
@@ -23,15 +24,24 @@
  Implement loadView if you want to create a view hierarchy programmatically  */
 - (void)loadView {
 	
-	BookmarkGroupListController * bookmarkGroupListController = [[BookmarkGroupListController alloc] initWithNibName:nil bundle:nil];
+	bookmarkGroupListController = [[BookmarkGroupListController alloc] initWithNibName:nil bundle:nil];
 	
 	UINavigationController *navControler = [[UINavigationController alloc] initWithRootViewController:bookmarkGroupListController];
 	bookmarkGroupListController.navigationItem.title = @"Bookmarks";
 	
-	[bookmarkGroupListController release];
+	UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:bookmarkGroupListController action:@selector(edit)];
+	
+	bookmarkGroupListController.navigationItem.rightBarButtonItem = deleteButtonItem;
+	
+	[deleteButtonItem release];
+	
 	
 	self.view = navControler.view;
 	
+}
+
+- (void) viewWillAppear:(BOOL) animated{
+	[bookmarkGroupListController.table reloadData];
 }
 
 
@@ -55,6 +65,7 @@
 
 
 - (void)dealloc {
+	[bookmarkGroupListController release];
 	[super dealloc];
 }
 

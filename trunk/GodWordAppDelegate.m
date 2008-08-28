@@ -25,6 +25,7 @@
 	[bible createEditableCopyOfDatabaseIfNeeded];
 	[bible initializeDatabase];
 	[bible initializeBookmarkFolders];
+	[bible initializeDevotionals];
 	Verse *verse = [[[Verse alloc] init] retain];
 	//cambiar cuando se guarde donde se quedo
 	[bible refreshVerseFromVerseId:10 verse:verse];

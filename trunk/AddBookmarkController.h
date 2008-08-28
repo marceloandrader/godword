@@ -14,13 +14,7 @@ UITableViewDataSource>
 {
 	IBOutlet UITableView *table;
 }
-- (UITableViewCell *) tableView:(UITableView *) tableView 
-		  cellForRowAtIndexPath:(NSIndexPath *) indexPath;
 
-- (NSInteger) numberOfSectionsInTableView:(UITableView *) tableView;
+@property(nonatomic, retain) UITableView *table;
 
-- (NSInteger) tableView:(UITableView *) tableView 
-  numberOfRowsInSection:(NSInteger) section ;
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

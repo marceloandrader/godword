@@ -39,17 +39,17 @@
 	UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth; 
 	table.delegate = self; 
 	table.dataSource = self; 
-	[table reloadData]; 
 	
 	self.view = table;
 	
-	[table release];
+
 }
 
 
 /*
- If you need to do additional setup after loading the view, override viewDidLoad.
+ If you need to do additional setup after loading the view, override viewDidLoad. 
  - (void)viewDidLoad {
+	 self.navigationItem.rightBarButtonItem = self.editButtonItem;
  }
  */
 
@@ -66,6 +66,7 @@
 }
 
 - (void)dealloc {
+	[table release];
 	[super dealloc];
 }
 
@@ -133,5 +134,48 @@
 	BookmarkFolder *bookmarFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex: section];	
     return bookmarFolder.title;
 }
+
+
+- (void) edit {
+	UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] 
+								 initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
+								 target:self 
+								 action:@selector(finishEdit)];
+	self.navigationItem.rightBarButtonItem = doneItem;
+	[doneItem release];
+	
+	[table setEditing:YES animated:YES];
+}
+
+- (void) finishEdit {
+	UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] 
+										 initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
+										 target:self
+										 action:@selector(edit)];
+	self.navigationItem.rightBarButtonItem = deleteButtonItem;
+	[deleteButtonItem release];
+	[table setEditing:NO animated:YES];
+}
+
+
+- (void)tableView:(UITableView *)aTableView 
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+		GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+		BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath section]];	
+		Bookmark *bookmark = (Bookmark*)[bookmarkFolder.bookmarks objectAtIndex:[indexPath row]];
+		
+		[appDelegate.bible deleteBookmark:bookmark];
+		[bookmarkFolder.bookmarks removeObjectAtIndex:indexPath.row];
+		
+        [aTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
+						 withRowAnimation:UITableViewRowAnimationFade];
+		
+	}
+}
+
 
 @end

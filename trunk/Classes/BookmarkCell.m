@@ -18,7 +18,7 @@
 		// Initialization code
 		
 		descriptionLabel =[[UILabel alloc] initWithFrame:CGRectZero];
-		descriptionLabel.font = [UIFont systemFontOfSize:14];
+		descriptionLabel.font = [UIFont boldSystemFontOfSize:14];
 		descriptionLabel.textAlignment = UITextAlignmentLeft;
 		descriptionLabel.backgroundColor = [UIColor clearColor];
 		descriptionLabel.textColor = [UIColor blackColor];
