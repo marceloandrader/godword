@@ -13,6 +13,7 @@
 #import "Book.h"
 #import "VerseCell.h"
 #import "AddBookmarkController.h"
+#import "AddDevotionalController.h"
 
 #define HEIGHT_ONE_ROW 21
 #define NUM_CHARACTERS_BY_LINE 44
@@ -161,7 +162,7 @@
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Save this verse to:"
 															 delegate:self cancelButtonTitle:nil		
 											   destructiveButtonTitle:nil
-													otherButtonTitles:@"Bookmark", @"Note", nil];
+													otherButtonTitles:@"Bookmark", @"Devotional", nil];
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 	[actionSheet showInView:self.view];
 	[actionSheet release];
@@ -180,8 +181,7 @@
 													 bundle:[NSBundle mainBundle]];
 		bookmarkController.navigationItem.title = @"Bookmark Folders";
 		UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] 
-										  initWithTitle:@"Back"
-										  style:UIBarButtonItemStyleBordered
+										  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 										  target:self 
 										  action:@selector(dismiss)];
 		
@@ -208,6 +208,40 @@
 	} else if (buttonIndex == 1) {
 		//Note
 		//NSLog(@"annotating %d", rowTapped);
+		NSDateFormatter *formatter;
+		
+		formatter = [[NSDateFormatter alloc] init];
+		[formatter setDateStyle:NSDateFormatterMediumStyle];
+        [formatter setTimeStyle:NSDateFormatterNoStyle];
+		
+		AddDevotionalController *devotionalController = [[AddDevotionalController alloc] 
+													 initWithNibName:@"AddDevotional" 
+													 bundle:[NSBundle mainBundle]];
+		devotionalController.navigationItem.title = [formatter stringFromDate:[[NSDate alloc] initWithTimeIntervalSinceNow:0]];
+		UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] 
+										  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+										  target:self 
+										  action:@selector(dismiss)];
+		
+		UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
+									   initWithBarButtonSystemItem:UIBarButtonSystemItemSave 
+									   target:devotionalController action:@selector(save)];
+				
+		devotionalController.navigationItem.leftBarButtonItem = dismissButton;
+		devotionalController.navigationItem.rightBarButtonItem = saveButton;
+		[dismissButton release];		
+		[saveButton release];
+		
+		UINavigationController *navigationController = [[UINavigationController alloc] 
+														initWithRootViewController:devotionalController];
+		[devotionalController release];
+		
+		
+		[self presentModalViewController:navigationController
+								animated:YES];
+		
+		[navigationController release];
+		
 	}
 }
 
