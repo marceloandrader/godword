@@ -30,6 +30,8 @@
 		8D7503FA0E4E8B2100BF500F /* AddBookmarkItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7503F90E4E8B2100BF500F /* AddBookmarkItem.xib */; };
 		8D7504000E4E8C5500BF500F /* AddBookmarkItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */; };
 		8D7593410E3FF84000BD8777 /* VerseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7593400E3FF84000BD8777 /* VerseCell.m */; };
+		8D7604370E664DC70028B85F /* EditTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7604360E664DC70028B85F /* EditTextViewController.m */; };
+		8D7604A00E6655A10028B85F /* CellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76049F0E6655A10028B85F /* CellTextView.m */; };
 		8D7827F30E58FFE100378BFF /* BookmarkGroupListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7827F20E58FFE100378BFF /* BookmarkGroupListController.m */; };
 		8D7829190E590E7A00378BFF /* BookmarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7829180E590E7A00378BFF /* BookmarkCell.m */; };
 		8D79AE760E5521EA00CAC6DF /* BookmarkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D79AE750E5521EA00CAC6DF /* BookmarkListController.m */; };
@@ -86,6 +88,10 @@
 		8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBookmarkItemController.m; path = Classes/AddBookmarkItemController.m; sourceTree = "<group>"; };
 		8D75933F0E3FF84000BD8777 /* VerseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerseCell.h; sourceTree = "<group>"; };
 		8D7593400E3FF84000BD8777 /* VerseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerseCell.m; sourceTree = "<group>"; };
+		8D7604350E664DC70028B85F /* EditTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTextViewController.h; path = Classes/EditTextViewController.h; sourceTree = "<group>"; };
+		8D7604360E664DC70028B85F /* EditTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTextViewController.m; path = Classes/EditTextViewController.m; sourceTree = "<group>"; };
+		8D76049E0E6655A10028B85F /* CellTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTextView.h; sourceTree = "<group>"; };
+		8D76049F0E6655A10028B85F /* CellTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextView.m; sourceTree = "<group>"; };
 		8D7827F10E58FFE100378BFF /* BookmarkGroupListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkGroupListController.h; path = Classes/BookmarkGroupListController.h; sourceTree = "<group>"; };
 		8D7827F20E58FFE100378BFF /* BookmarkGroupListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkGroupListController.m; path = Classes/BookmarkGroupListController.m; sourceTree = "<group>"; };
 		8D7829170E590E7A00378BFF /* BookmarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkCell.h; path = Classes/BookmarkCell.h; sourceTree = "<group>"; };
@@ -197,6 +203,8 @@
 		8D51C52E0E3404D2004F21B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D76049E0E6655A10028B85F /* CellTextView.h */,
+				8D76049F0E6655A10028B85F /* CellTextView.m */,
 				8DFDA1010E4943500049F120 /* AddBookmarkController.h */,
 				8DFDA1020E4943500049F120 /* AddBookmarkController.m */,
 				8D51C5600E3406B3004F21B9 /* FindVerseController.h */,
@@ -225,6 +233,8 @@
 				8DD0F65B0E64E9B9008AF516 /* DevotionalCell.m */,
 				8DD0F71C0E64F87B008AF516 /* AddDevotionalController.h */,
 				8DD0F71D0E64F87B008AF516 /* AddDevotionalController.m */,
+				8D7604350E664DC70028B85F /* EditTextViewController.h */,
+				8D7604360E664DC70028B85F /* EditTextViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -338,6 +348,8 @@
 				8DD0F6570E64E87A008AF516 /* DevotionalListController.m in Sources */,
 				8DD0F65C0E64E9B9008AF516 /* DevotionalCell.m in Sources */,
 				8DD0F71E0E64F87B008AF516 /* AddDevotionalController.m in Sources */,
+				8D7604370E664DC70028B85F /* EditTextViewController.m in Sources */,
+				8D7604A00E6655A10028B85F /* CellTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
