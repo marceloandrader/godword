@@ -61,7 +61,7 @@
 	[testamentChooser setSelectedSegmentIndex:appDelegate.verseSelected.testament];
 	[versePicker selectRow:appDelegate.verseSelected.bookNumber inComponent:0 animated:NO];
 	[versePicker selectRow:(appDelegate.verseSelected.chapterNumber-1) inComponent:1 animated:NO];
-	[versePicker selectRow:(appDelegate.verseSelected.verseNumber) inComponent:2 animated:NO];
+	[versePicker selectRow:(appDelegate.verseSelected.verseNumber-1) inComponent:2 animated:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -12,6 +12,7 @@
 @class Bookmark;
 @class Verse;
 @class BookmarkFolder;
+@class Devotional;
 
 @interface BibleDatabase : NSObject {
 	sqlite3 *connection;
@@ -55,4 +56,11 @@
 
 - (void) initializeDevotionals;
 
+- (void) saveDevotional:(Devotional *) devotional; 
+
+- (NSString*) obtainVerseNumber:(Verse*) verseSelected;
+
+- (NSString*) obtainVerseText:(Verse *) verseSelected;
+
+- (void) deleteDevotional:(Devotional *)devotional;
 @end

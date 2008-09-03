@@ -159,15 +159,15 @@
 
 - (void) initializeDevotionals
 {
-	NSMutableArray *folders = [[NSMutableArray alloc] init];
-    self.devotionals = folders;
-    [folders release];
+	NSMutableArray *devotionalsArray = [[NSMutableArray alloc] init];
+    self.devotionals = devotionalsArray;
+    [devotionalsArray release];
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"bible.db"];
     if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
-		const char *sql = "select d.*, v.chapter_no, v.verse_no, b.name from devotionals d, books b, verses v where d.verse = v.id and v.book_id = b.id ";
+		const char *sql = "select d.*, v.chapter_no, v.verse_no, b.name from devotionals d, books b, verses v where d.verse_id = v.id and v.book_id = b.id ";
         sqlite3_stmt *statement;
         if (sqlite3_prepare_v2(connection, sql, -1, &statement, NULL) == SQLITE_OK) {
             while (sqlite3_step(statement) == SQLITE_ROW) {
@@ -207,4 +207,49 @@
 	
 }
 
+
+- (void) saveDevotional:(Devotional *) devotional
+{
+	if (devotional.pk != 0)
+	{
+		[devotional saveWithDatabase:connection];
+	}else
+	{	
+		[devotional addWithDatabase:connection];
+		[devotionals addObject:devotional];
+	}
+}
+
+- (NSString*) obtainVerseNumber:(Verse*) verseSelected
+{
+	
+	Book* book ;
+	if (verseSelected.testament == 0 )
+		book = (Book*) [self.booksFromOld 
+						objectAtIndex: verseSelected.bookNumber];
+	else
+		book = (Book*) [self.booksFromNew 
+						objectAtIndex: verseSelected.bookNumber];
+	
+	NSString * verseNo = [[NSString alloc] initWithFormat:@"%@ %d:%d", book.title, verseSelected.chapterNumber , verseSelected.verseNumber];
+	return verseNo;
+}
+
+- (NSString*) obtainVerseText:(Verse *) verseSelected{
+
+	Book* book ;
+	if (verseSelected.testament == 0 )
+		book = (Book*) [self.booksFromOld 
+						objectAtIndex: verseSelected.bookNumber];
+	else
+		book = (Book*) [self.booksFromNew 
+						objectAtIndex: verseSelected.bookNumber];
+	
+	return [self obtainTextVerseInBook:book inChapter:verseSelected.chapterNumber inVerse:verseSelected.verseNumber];
+}
+
+
+- (void) deleteDevotional:(Devotional *)devotional{
+	[devotional deleteWithDatabase:connection];
+}
 @end

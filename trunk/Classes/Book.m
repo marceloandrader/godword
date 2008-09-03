@@ -70,7 +70,8 @@ static sqlite3_stmt *obtainVerseText = nil;
 	
 	int success = sqlite3_step(obtainVerseText);
 	NSString *verseText = nil;
-	NSString *verseNumberText = [[[NSString alloc] init] stringByAppendingFormat:@"%d. ", verse];
+	//NSString *verseNumberText = [[[NSString alloc] init] stringByAppendingFormat:@"%d. ", verse];
+	NSString *verseNumberText = @"";
 	
 	if (success == SQLITE_ROW) 
 	{

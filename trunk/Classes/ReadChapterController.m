@@ -86,10 +86,10 @@
 		book = (Book*) [appDelegate.bible.booksFromNew 
 						objectAtIndex: appDelegate.verseSelected.bookNumber];
 	
-	cell.verseText.text = [appDelegate.bible 
+	cell.verseText.text = [[NSString alloc] initWithFormat:@"%d. %@", indexPath.row+1, [appDelegate.bible 
 						   obtainTextVerseInBook:book 
 						   inChapter:appDelegate.verseSelected.chapterNumber 
-						   inVerse:[indexPath row]+1];
+						   inVerse:[indexPath row]+1]];
 	return cell;
 }
 
@@ -206,7 +206,7 @@
 
 		[navigationController release];
 	} else if (buttonIndex == 1) {
-		//Note
+		//Devotional
 		//NSLog(@"annotating %d", rowTapped);
 		NSDateFormatter *formatter;
 		
@@ -217,6 +217,7 @@
 		AddDevotionalController *devotionalController = [[AddDevotionalController alloc] 
 													 initWithNibName:@"AddDevotional" 
 													 bundle:[NSBundle mainBundle]];
+		devotionalController.devotional = nil;
 		devotionalController.navigationItem.title = [formatter stringFromDate:[[NSDate alloc] initWithTimeIntervalSinceNow:0]];
 		UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] 
 										  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel

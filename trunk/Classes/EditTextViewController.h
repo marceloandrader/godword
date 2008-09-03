@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EditTextViewController : UIViewController<UIScrollViewDelegate, UITextViewDelegate,
-													UITableViewDelegate, UITableViewDataSource> {
+@interface EditTextViewController : UIViewController<UITextViewDelegate,
+UITableViewDelegate, UITableViewDataSource> {
 	UITableView	*myTableView;
+	UITextView *txtEdited;													
+	
 }
 
 @property (nonatomic, retain) UITableView *myTableView;
-
+@property (nonatomic, retain) UITextView *txtEdited;							
 - (void) done;
 
 @end

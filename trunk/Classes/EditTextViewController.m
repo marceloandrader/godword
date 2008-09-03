@@ -13,7 +13,7 @@
 
 #define kUITextViewCellRowHeight 150.0
 
-@synthesize myTableView;
+@synthesize myTableView, txtEdited;
 
 - (id)init
 {
@@ -56,7 +56,7 @@
     textView.delegate = self;
     textView.backgroundColor = [UIColor whiteColor];
 	
-	textView.text = @"";
+	textView.text = txtEdited.text;
 	textView.returnKeyType = UIReturnKeyDefault;
 	textView.keyboardType = UIKeyboardTypeDefault;	// use the default type input method (entire keyboard)
 	
@@ -72,21 +72,12 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
 	// provide my own Save button to dismiss the keyboard
-	UIBarButtonItem* saveItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-																			  target:self action:@selector(saveAction:)];
+	UIBarButtonItem* saveItem = [[UIBarButtonItem alloc] 
+								 initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+								 target:self 
+								 action:@selector(done)];
 	self.navigationItem.rightBarButtonItem = saveItem;
 	[saveItem release];
-}
-
-- (void)saveAction:(id)sender
-{
-	// finish typing text/dismiss the keyboard by removing it as the first responder
-	//
-	UITableViewCell *cell = [myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-	
-	[((CellTextView *)cell).view resignFirstResponder];
-	self.navigationItem.rightBarButtonItem = nil;	// this will remove the "save" button
-	[self done];
 }
 
 
@@ -141,12 +132,15 @@
 	
 	if (row == 0)
 		cell = [myTableView dequeueReusableCellWithIdentifier:kCellTextView_ID];
-
 	if (cell == nil)
 	{
 		if (row == 0)
+		{
 			cell = [[[CellTextView alloc] initWithFrame:CGRectZero reuseIdentifier:kCellTextView_ID] autorelease];
+			((CellTextView*)cell).textView = [self create_UITextView];
+		}
 	}
+
 	
 	return cell;
 }
@@ -156,19 +150,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSInteger row = [indexPath row];
-	UITableViewCell *sourceCell = [self obtainTableCellForRow:row];
+	UITableViewCell *cellView = [self obtainTableCellForRow:row];
 	
-	// we are creating a new cell, setup its attributes
-	if (row == 0)
-	{
-		// this cell hosts the UISwitch control
-		((CellTextView *)sourceCell).view = [self create_UITextView];
-	}
-	
-	return sourceCell;
+	return cellView;
 }
 
 - (void) done {
+	UITableViewCell *cell = [myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+	
+	[((CellTextView *)cell).textView resignFirstResponder];
+	self.txtEdited.text = ((CellTextView *)cell).textView.text;
+	self.navigationItem.rightBarButtonItem = nil;
 	[self.navigationController popViewControllerAnimated:YES];
 }
 

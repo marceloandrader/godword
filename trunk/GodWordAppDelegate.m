@@ -13,6 +13,10 @@
 #import "FindVerseController.h"
 #import "ReadChapterController.h"
 #import "BookmarkListController.h"
+#import "BookmarkFolder.h"
+#import "Devotional.h"
+#import "Bookmark.h"
+
 
 @implementation GodWordAppDelegate
 
@@ -38,6 +42,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     [Book finalizeStatements];
+	[Verse finalizeStatements];
+	[BookmarkFolder finalizeStatements];
+	[Bookmark finalizeStatements];
+	[Devotional finalizeStatements];
 }	
 
 - (void)dealloc {

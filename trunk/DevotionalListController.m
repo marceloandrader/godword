@@ -11,6 +11,7 @@
 #import "BibleDatabase.h"
 #import "Devotional.h"
 #import "DevotionalCell.h"
+#import "AddDevotionalController.h"
 
 @implementation DevotionalListController
 
@@ -33,9 +34,10 @@
 	table.autoresizingMask = 
 	UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth; 
 	table.separatorStyle = UITableViewCellSeparatorStyleNone;
-	table.allowsSelectionDuringEditing = YES;
+	table.allowsSelectionDuringEditing = NO;
 	table.delegate = self; 
 	table.dataSource = self; 
+	table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 	
 	self.view = table;
 }
@@ -77,7 +79,7 @@
 
 - (void) finishEdit {
 	UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] 
-										 initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
+										 initWithBarButtonSystemItem:UIBarButtonSystemItemTrash 
 										 target:self
 										 action:@selector(edit)];
 	self.navigationItem.rightBarButtonItem = deleteButtonItem;
@@ -122,10 +124,73 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {	
-		
+	NSDateFormatter *formatter;
+	
+	formatter = [[NSDateFormatter alloc] init];
+	[formatter setDateStyle:NSDateFormatterMediumStyle];
+	[formatter setTimeStyle:NSDateFormatterNoStyle];
+	
+	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	Devotional *devotional = (Devotional*) [appDelegate.bible.devotionals objectAtIndex:indexPath.row];
+	
+	[appDelegate.bible refreshVerseFromVerseId:devotional.verse verse:appDelegate.verseSelected];
+	
+	AddDevotionalController *devotionalController = [[AddDevotionalController alloc] 
+													 initWithNibName:@"AddDevotional" 
+													 bundle:[NSBundle mainBundle]];
+	devotionalController.devotional = devotional;
+	devotionalController.navigationItem.title = [formatter stringFromDate:[[NSDate alloc] initWithTimeIntervalSinceNow:0]];
+	UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] 
+									  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+									  target:self 
+									  action:@selector(dismiss)];
+	
+	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] 
+								   initWithBarButtonSystemItem:UIBarButtonSystemItemSave 
+								   target:devotionalController action:@selector(saveWithPop)];
+	
+	devotionalController.navigationItem.leftBarButtonItem = dismissButton;
+	devotionalController.navigationItem.rightBarButtonItem = saveButton;
+	[dismissButton release];		
+	[saveButton release];
+	
+	
+	[self.navigationController pushViewController:devotionalController
+							animated:YES];
+	
+	[devotionalController release];
+	
+	
 }
 
+-(void)dismiss
+{
+	[self.navigationController popViewControllerAnimated:YES];
+}
 
+- (void)     tableView:(UITableView *)aTableView 
+	commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
+	 forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+		
+		GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+		
+		Devotional * devotionalToDelete = [appDelegate.bible.devotionals objectAtIndex:indexPath.row];
+		
+		if (devotionalToDelete)
+		{	
+			[appDelegate.bible deleteDevotional:devotionalToDelete];
+			[appDelegate.bible.devotionals removeObjectAtIndex:indexPath.row];
+			[aTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
+							  withRowAnimation:UITableViewRowAnimationFade];
+			
+			
+		}
+		
+	}
+}
 
 
 @end
