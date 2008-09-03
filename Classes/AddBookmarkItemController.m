@@ -38,6 +38,7 @@
 	[self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
 	GodWordAppDelegate *delegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
 	verse.text = delegate.verseSelected.text;
+	verseNo.text = [delegate.bible obtainVerseNumber:delegate.verseSelected];
 }
  
 
@@ -63,17 +64,7 @@
 {
 	GodWordAppDelegate *appDelegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
 	BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:self.rowFolder];
-	Book* book ;
-	if (appDelegate.verseSelected.testament == 0 )
-		book = (Book*) [appDelegate.bible.booksFromOld 
-						objectAtIndex: appDelegate.verseSelected.bookNumber];
-	else
-		book = (Book*) [appDelegate.bible.booksFromNew 
-						objectAtIndex: appDelegate.verseSelected.bookNumber];
-	
-	NSString * verseNo = [[NSString alloc] initWithFormat:@"%@ %d:%d", book.title, appDelegate.verseSelected.chapterNumber , appDelegate.verseSelected.verseNumber];
-	
-	Bookmark * bookmark = [[[Bookmark alloc] initWithPrimaryKey:0 description:[description text] verse:appDelegate.verseSelected.verseId folder:bookmarkFolder.pk verseNo:verseNo] retain];
+	Bookmark * bookmark = [[[Bookmark alloc] initWithPrimaryKey:0 description:[description text] verse:appDelegate.verseSelected.verseId folder:bookmarkFolder.pk verseNo:[appDelegate.bible obtainVerseNumber:appDelegate.verseSelected]] retain];
 	[appDelegate.bible saveBookmark:bookmark];
 	[bookmarkFolder.bookmarks addObject:bookmark];
 	[[self navigationController] popViewControllerAnimated:YES];

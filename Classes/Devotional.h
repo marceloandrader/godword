@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <sqlite3.h>
 
 @interface Devotional : NSObject {
 	NSInteger pk;
@@ -26,5 +26,11 @@
 @property(nonatomic, assign) NSInteger verse;
 @property(nonatomic, copy) NSString *verseNo;
 @property(nonatomic, copy) 	NSDate *date;
+
+- (void) addWithDatabase: (sqlite3 *) database ;
+- (void) saveWithDatabase: (sqlite3 *) database ;
+- (void) deleteWithDatabase: (sqlite3 *) database ;
+
++ (void) finalizeStatements;
 
 @end

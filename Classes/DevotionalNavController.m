@@ -27,7 +27,7 @@
  UINavigationController *navControler = [[UINavigationController alloc] initWithRootViewController:devotionalListController];
  devotionalListController.navigationItem.title = @"Devotionals";
  
- UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:devotionalListController action:@selector(edit)];
+ UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:devotionalListController action:@selector(edit)];
  
  devotionalListController.navigationItem.rightBarButtonItem = deleteButtonItem;
  

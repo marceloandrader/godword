@@ -13,9 +13,9 @@ extern NSString *kCellTextView_ID;
 
 @interface CellTextView : UITableViewCell
 {
-    UITextView *view;
+    UITextView *textView;
 }
 
-@property (nonatomic, retain) UITextView *view;
+@property (nonatomic, retain) UITextView *textView;
 
 @end

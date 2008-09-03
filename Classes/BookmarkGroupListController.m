@@ -118,7 +118,7 @@
 	appDelegate.tabBarController.selectedIndex = 1;
 	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table reloadData];
 	
-	NSIndexPath* indexPathPosition = [NSIndexPath indexPathForRow:appDelegate.verseSelected.verseNumber inSection:0];
+	NSIndexPath* indexPathPosition = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
 	
 	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table 
 	 scrollToRowAtIndexPath:indexPathPosition 

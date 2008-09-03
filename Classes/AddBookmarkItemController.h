@@ -12,6 +12,7 @@
 @interface AddBookmarkItemController : UIViewController {
 	IBOutlet UITextField * description;
 	IBOutlet UILabel * verse;
+	IBOutlet UILabel * verseNo;
 	IBOutlet UIButton * save;
 	NSInteger rowFolder;
 }

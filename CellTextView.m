@@ -16,7 +16,7 @@ NSString* kCellTextView_ID = @"CellTextView_ID";
 
 @implementation CellTextView
 
-@synthesize view;
+@synthesize textView;
 
 - (id)initWithFrame:(CGRect)aRect reuseIdentifier:(NSString *)identifier
 {
@@ -29,10 +29,10 @@ NSString* kCellTextView_ID = @"CellTextView_ID";
 	return self;
 }
 
-- (void)setView:(UITextView *)inView
+- (void)setTextView:(UITextView *)inView
 {
-	view = inView;
-	[self.view retain];
+	textView = inView;
+	[self.textView retain];
 	[self.contentView addSubview:inView];
 	[self layoutSubviews];
 }
@@ -46,7 +46,7 @@ NSString* kCellTextView_ID = @"CellTextView_ID";
 	// inset the text view within the cell
 	if (contentRect.size.width > (kInsertValue*2))	// but not if the width is too small
 	{
-		self.view.frame  = CGRectMake(contentRect.origin.x + kInsertValue,
+		self.textView.frame  = CGRectMake(contentRect.origin.x + kInsertValue,
 									  contentRect.origin.y + kInsertValue,
 									  contentRect.size.width - (kInsertValue*2),
 									  contentRect.size.height - (kInsertValue*2));
@@ -55,8 +55,8 @@ NSString* kCellTextView_ID = @"CellTextView_ID";
 
 - (void)dealloc
 {
-    [view release];
-    [super dealloc];
+    [textView release];
+  //  [super dealloc];
 }
 
 @end

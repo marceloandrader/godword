@@ -8,20 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
+@class Devotional;
 
 @interface AddDevotionalController : UIViewController {
-	IBOutlet UILabel *verse;
+	//IBOutlet UILabel *verse;
 	IBOutlet UITextView *verseText;	
 	IBOutlet UITextField *devotionalTitle;
 	IBOutlet UITextView *q1;
 	IBOutlet UITextView *q2;
+	IBOutlet UIButton *btnGoToVerse;
 	NSDateFormatter *formatter;
+	Devotional *devotional;
 }
+
+@property(nonatomic, retain) Devotional *devotional;
 
 - (void) save;
 
+- (void) saveWithPop;
+
+- (void) showEditTextView:(UITextView*) question;
+
 - (IBAction) finishEditing: (id) sender;
 
-- (IBAction) editTextView: (id) sender;
+- (IBAction) editTextView1: (id) sender;
+
+- (IBAction) editTextView2: (id) sender;
+
+- (IBAction) goToVerse: (id) sender;
 
 @end

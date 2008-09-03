@@ -77,7 +77,7 @@ static sqlite3_stmt *obtainVerse = nil;
 		self.verseId = verseIdQuery;
 		self.testament = sqlite3_column_int(obtainVerse, 0);
 		self.chapterNumber = sqlite3_column_int(obtainVerse, 1);
-		self.verseNumber = sqlite3_column_int(obtainVerse, 2)-1;
+		self.verseNumber = sqlite3_column_int(obtainVerse, 2);
 		NSString * bookId = [NSString stringWithUTF8String:(char *)sqlite3_column_text(obtainVerse, 3)] ;
 		
 	GodWordAppDelegate *delegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
