@@ -32,7 +32,11 @@
 	[bible initializeDevotionals];
 	Verse *verse = [[[Verse alloc] init] retain];
 	//cambiar cuando se guarde donde se quedo
-	[bible refreshVerseFromVerseId:10 verse:verse];
+
+	NSInteger verseId  = [[NSUserDefaults standardUserDefaults] integerForKey:@"verseId"];
+	NSInteger tabSelected  = [[NSUserDefaults standardUserDefaults] integerForKey:@"tabSelected"];
+	[bible refreshVerseFromVerseId:verseId verse:verse];
+	self.tabBarController.selectedIndex = tabSelected;
 	verseSelected = verse;
 	[verse release];
 	
@@ -41,6 +45,12 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+	
+	// save the drill-down hierarchy of selections to preferences
+	[self.bible refreshVerseId:self.verseSelected];
+	[[NSUserDefaults standardUserDefaults] setInteger:self.verseSelected.verseId forKey:@"verseId"];
+	[[NSUserDefaults standardUserDefaults] setInteger:self.tabBarController.selectedIndex  forKey:@"tabSelected"];
+
     [Book finalizeStatements];
 	[Verse finalizeStatements];
 	[BookmarkFolder finalizeStatements];

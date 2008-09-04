@@ -34,7 +34,7 @@
 		verseText.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 //		verseText.multipleTouchEnabled = true;
 		[self.contentView addSubview:verseText];
-		self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;		
+		//self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;		
 	}
 	return self;
 }

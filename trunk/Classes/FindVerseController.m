@@ -187,14 +187,6 @@
 	appDelegate.verseSelected.chapterNumber = [versePicker selectedRowInComponent:1] + 1;
 	appDelegate.verseSelected.verseNumber   = [versePicker selectedRowInComponent:2] + 1;
 	appDelegate.tabBarController.selectedIndex = 1;
-	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table reloadData];
-	
-	NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[versePicker selectedRowInComponent:2] inSection:0];
-							  
-	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:false];
-	
-	[indexPath release];
-
 }
 
 - (IBAction) changeTestament: (id) sender

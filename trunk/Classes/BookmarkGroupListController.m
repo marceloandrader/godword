@@ -116,15 +116,15 @@
 	[appDelegate.bible refreshVerseFromVerseId:bookmark.verse verse:appDelegate.verseSelected];
 	
 	appDelegate.tabBarController.selectedIndex = 1;
-	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table reloadData];
-	
-	NSIndexPath* indexPathPosition = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
-	
-	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table 
-	 scrollToRowAtIndexPath:indexPathPosition 
-	 atScrollPosition:UITableViewScrollPositionTop animated:false];
-	
-	[indexPathPosition release];
+//	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table reloadData];
+//	
+//	NSIndexPath* indexPathPosition = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
+//	
+//	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table 
+//	 scrollToRowAtIndexPath:indexPathPosition 
+//	 atScrollPosition:UITableViewScrollPositionTop animated:false];
+//	
+//	[indexPathPosition release];
 	
 	
 }
