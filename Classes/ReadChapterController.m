@@ -65,6 +65,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[table reloadData];
+	GodWordAppDelegate * appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
+	
+	[table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+	
+	[indexPath release];
+	
 }
 
 #pragma mark UITableViewDelegate
@@ -75,7 +82,7 @@
 	VerseCell *cell = (VerseCell*) [tableView dequeueReusableCellWithIdentifier:@"VerseCell"];
 	if (cell == nil) {
 		cell = [[VerseCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"VerseCell"];
-		cell.hidesAccessoryWhenEditing = NO;
+		//cell.hidesAccessoryWhenEditing = NO;
 	}
 	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
 	Book* book ;
@@ -168,6 +175,22 @@
 	[actionSheet release];
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	rowTapped = [indexPath row];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	GodWordAppDelegate * delegate = (GodWordAppDelegate*) [[UIApplication sharedApplication] delegate];
+	delegate.verseSelected.verseNumber = rowTapped + 1;
+	[delegate.bible refreshVerseId:delegate.verseSelected];
+	
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Save this verse to:"
+															 delegate:self cancelButtonTitle:@"Cancel"		
+											   destructiveButtonTitle:nil
+													otherButtonTitles:@"Bookmark", @"Devotional", nil];
+	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
+	[actionSheet showInView:self.view];
+	[actionSheet release];
+}
 
 #pragma mark UIActionSheet
 
