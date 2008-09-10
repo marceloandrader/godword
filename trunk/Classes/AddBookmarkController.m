@@ -107,7 +107,7 @@
 														  initWithNibName:@"AddBookmarkItem" 
 														  bundle:[NSBundle mainBundle]] autorelease];
 		addBookmarkItemController.rowFolder = [indexPath row];
-		addBookmarkItemController.navigationItem.title = @"Add Bookmark";
+		addBookmarkItemController.navigationItem.title = NSLocalizedString(@"Add Bookmark",@"Add Bookmark");
 		[[self navigationController] pushViewController:addBookmarkItemController animated:YES];
 		
 	} else {
@@ -121,7 +121,7 @@
 		AddFolderController *addFolderController = [[[AddFolderController alloc] initWithNibName:@"AddFolder" bundle:[NSBundle mainBundle]
 		] autorelease];
 		
-		addFolderController.navigationItem.title = @"Edit Folder";
+		addFolderController.navigationItem.title = NSLocalizedString(@"Edit Folder",@"Edit Folder");
 		addFolderController.folder = folderToEdit;
 		[self.navigationController pushViewController:addFolderController animated:YES];
 	}
@@ -153,7 +153,7 @@
 		AddFolderController *addFolderController = [[[AddFolderController alloc] initWithNibName:@"AddFolder" bundle:[NSBundle mainBundle]
 													 ] autorelease];
 		
-		addFolderController.navigationItem.title = @"Add Folder";
+		addFolderController.navigationItem.title = NSLocalizedString(@"Add Folder",@"Add Folder");
 		BookmarkFolder *insertFolder = [[BookmarkFolder alloc] initWithPrimaryKey:0 title:@""];
 		addFolderController.folder = insertFolder;
 		[self.navigationController pushViewController:addFolderController animated:YES];

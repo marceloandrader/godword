@@ -81,7 +81,7 @@ static sqlite3_stmt *obtainVerseText = nil;
 	sqlite3_reset(obtainVerseText);
 	
 	if (verseText==nil)
-		verseText = [[NSString alloc] initWithString:@"Verse not found"];				 
+		verseText = [[NSString alloc] initWithString:NSLocalizedString(@"Verse not found",@"Verse not found")];				 
 	
 	return verseText;
 	

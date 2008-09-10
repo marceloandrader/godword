@@ -21,7 +21,7 @@
 	if (self)
 	{
 		// this title will appear in the navigation bar
-		self.title = @"Edit Answer";
+		self.title = NSLocalizedString(@"Edit Answer", @"Edit Answer");
 	}
 	
 	return self;
