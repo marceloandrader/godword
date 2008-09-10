@@ -25,7 +25,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// Initialization code
-		self.title = @"Read";
+		self.title = NSLocalizedString(@"Read",@"Read");
 		self.tabBarItem.image = [UIImage imageNamed:@"Notes.png"];
 	}
 	return self;
@@ -176,10 +176,10 @@
 	delegate.verseSelected.verseNumber = rowTapped + 1;
 	[delegate.bible refreshVerseId:delegate.verseSelected];
 	
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Save this verse to:"
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Save this verse to:",@"Save this verse to:")
 															 delegate:self cancelButtonTitle:nil		
 											   destructiveButtonTitle:nil
-													otherButtonTitles:@"Bookmark", @"Devotional", nil];
+													otherButtonTitles:NSLocalizedString(@"Bookmark",@"Bookmark"), NSLocalizedString(@"Devotional",@"Devotional"), nil];
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 	[actionSheet showInView:self.view];
 	[actionSheet release];
@@ -193,10 +193,10 @@
 	delegate.verseSelected.verseNumber = rowTapped + 1;
 	[delegate.bible refreshVerseId:delegate.verseSelected];
 	
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Save this verse to:"
-															 delegate:self cancelButtonTitle:@"Cancel"		
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Save this verse to:",@"Save this verse to:")
+															 delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",@"Cancel")		
 											   destructiveButtonTitle:nil
-													otherButtonTitles:@"Bookmark", @"Devotional", nil];
+													otherButtonTitles:NSLocalizedString(@"Bookmark",@"Bookmark"), NSLocalizedString(@"Devotional",@"Devotional"), nil];
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 	[actionSheet showInView:self.view];
 	[actionSheet release];
@@ -212,7 +212,7 @@
 		AddBookmarkController *bookmarkController = [[AddBookmarkController alloc] 
 													 initWithNibName:@"AddBookmark" 
 													 bundle:[NSBundle mainBundle]];
-		bookmarkController.navigationItem.title = @"Bookmark Folders";
+		bookmarkController.navigationItem.title = NSLocalizedString(@"Bookmark Folders",@"Bookmark Folders");
 		UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] 
 										  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 										  target:self 

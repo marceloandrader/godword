@@ -25,7 +25,7 @@
  devotionalListController = [[DevotionalListController alloc] initWithNibName:nil bundle:nil];
  
  UINavigationController *navControler = [[UINavigationController alloc] initWithRootViewController:devotionalListController];
- devotionalListController.navigationItem.title = @"Devotionals";
+ devotionalListController.navigationItem.title = NSLocalizedString(@"Devotionals",@"Devotionals");
  
  UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:devotionalListController action:@selector(edit)];
  

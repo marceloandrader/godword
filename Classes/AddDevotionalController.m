@@ -132,7 +132,7 @@
 	EditTextViewController *editTextViewController = [[EditTextViewController alloc]
 													  initWithNibName:nil 
 													  bundle:nil];
-	editTextViewController.navigationItem.title = @"Edit";
+	editTextViewController.navigationItem.title = NSLocalizedString(@"Edit",@"Edit");
 	UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] 
 								 initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
 								 target:editTextViewController 
