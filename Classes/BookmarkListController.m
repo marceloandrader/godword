@@ -27,13 +27,13 @@
 	bookmarkGroupListController = [[BookmarkGroupListController alloc] initWithNibName:nil bundle:nil];
 	
 	UINavigationController *navControler = [[UINavigationController alloc] initWithRootViewController:bookmarkGroupListController];
-	bookmarkGroupListController.navigationItem.title = @"Bookmarks";
+	bookmarkGroupListController.navigationItem.title = @"Folders";
 	
-	UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:bookmarkGroupListController action:@selector(edit)];
+	//UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:bookmarkGroupListController action:@selector(edit)];
 	
-	bookmarkGroupListController.navigationItem.rightBarButtonItem = deleteButtonItem;
+	//bookmarkGroupListController.navigationItem.rightBarButtonItem = deleteButtonItem;
 	
-	[deleteButtonItem release];
+	//[deleteButtonItem release];
 	
 	
 	self.view = navControler.view;

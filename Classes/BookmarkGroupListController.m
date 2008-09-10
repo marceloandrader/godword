@@ -15,6 +15,7 @@
 #import "BibleDatabase.h"
 #import "AddBookmarkItemController.h"
 #import "Verse.h"
+#import "BookmarksOfFolderController.h"
 
 @implementation BookmarkGroupListController
 
@@ -33,7 +34,7 @@
 - (void)loadView {
 	table = [[UITableView alloc] initWithFrame:
 			 [[UIScreen mainScreen] applicationFrame] 
-										 style:UITableViewStyleGrouped];
+										 style:UITableViewStylePlain];
 	
 	table.autoresizingMask = 
 	UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth; 
@@ -45,6 +46,9 @@
 
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+	[self.table reloadData];
+}
 
 /*
  If you need to do additional setup after loading the view, override viewDidLoad. 
@@ -76,24 +80,32 @@
 - (UITableViewCell *) tableView:(UITableView *) tableView 
 		  cellForRowAtIndexPath:(NSIndexPath *) indexPath 
 {
-	BookmarkCell *cell = (BookmarkCell*) [tableView dequeueReusableCellWithIdentifier:@"BookmarkCellList"];
+	//BookmarkCell *cell = (BookmarkCell*) [tableView dequeueReusableCellWithIdentifier:@"BookmarkCellList"];
+//	if (cell == nil) {
+//		cell = [[BookmarkCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"BookmarkCellList"];
+//	}
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookmarkCellList"];
+	
 	if (cell == nil) {
-		cell = [[BookmarkCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"BookmarkCellList"];
+		cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"BookmarkCellList"];
+		cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
 	}
 	
 	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath section]];	
-	Bookmark *bookmark = (Bookmark*)[bookmarkFolder.bookmarks objectAtIndex:[indexPath row]];
-	cell.descriptionLabel.text = bookmark.description;
-	cell.verse.text = bookmark.verseNo;
+	BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath row]];	
+//	Bookmark *bookmark = (Bookmark*)[bookmarkFolder.bookmarks objectAtIndex:[indexPath row]];
+//	cell.descriptionLabel.text = bookmark.description;
+//	cell.verse.text = bookmark.verseNo;
+	cell.text = [NSString stringWithFormat:@"%@ (%d)", bookmarkFolder.title, bookmarkFolder.bookmarks.count];
 	return cell;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *) tableView
 {
-	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	return [appDelegate.bible.bookmarkFolders count];
-	
+	//GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+	//return [appDelegate.bible.bookmarkFolders count];
+	return 1;
 }
 
 - (NSInteger) tableView:(UITableView *) tableView 
@@ -101,81 +113,29 @@
 {
 	
 	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:section];	
-	return [bookmarkFolder.bookmarks count];
+	//BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:section];	
+	return [appDelegate.bible.bookmarkFolders count];
 	
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {	
-	[tableView deselectRowAtIndexPath:indexPath animated:NO];
-	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath section]];
-	Bookmark *bookmark = (Bookmark*)[bookmarkFolder.bookmarks objectAtIndex:[indexPath row]];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
-	[appDelegate.bible refreshVerseFromVerseId:bookmark.verse verse:appDelegate.verseSelected];
+	BookmarksOfFolderController *bookmarksOfFolder = [[BookmarksOfFolderController alloc] init];
 	
-	appDelegate.tabBarController.selectedIndex = 1;
-//	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table reloadData];
-//	
-//	NSIndexPath* indexPathPosition = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
-//	
-//	[((ReadChapterController*)appDelegate.tabBarController.selectedViewController).table 
-//	 scrollToRowAtIndexPath:indexPathPosition 
-//	 atScrollPosition:UITableViewScrollPositionTop animated:false];
-//	
-//	[indexPathPosition release];
+	bookmarksOfFolder.folder = indexPath.row;
 	
+	[self.navigationController pushViewController:bookmarksOfFolder animated:YES];
+	
+	UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:bookmarksOfFolder action:@selector(edit)];
+	
+	bookmarksOfFolder.navigationItem.rightBarButtonItem = editButtonItem;
+	
+	[editButtonItem release];
+	
+	[bookmarksOfFolder release];
 	
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	BookmarkFolder *bookmarFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex: section];	
-    return bookmarFolder.title;
-}
-
-
-- (void) edit {
-	UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] 
-								 initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
-								 target:self 
-								 action:@selector(finishEdit)];
-	self.navigationItem.rightBarButtonItem = doneItem;
-	[doneItem release];
-	
-	[table setEditing:YES animated:YES];
-}
-
-- (void) finishEdit {
-	UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] 
-										 initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
-										 target:self
-										 action:@selector(edit)];
-	self.navigationItem.rightBarButtonItem = deleteButtonItem;
-	[deleteButtonItem release];
-	[table setEditing:NO animated:YES];
-}
-
-
-- (void)tableView:(UITableView *)aTableView 
-commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
-forRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-		GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-		BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath section]];	
-		Bookmark *bookmark = (Bookmark*)[bookmarkFolder.bookmarks objectAtIndex:[indexPath row]];
-		
-		[appDelegate.bible deleteBookmark:bookmark];
-		[bookmarkFolder.bookmarks removeObjectAtIndex:indexPath.row];
-		
-        [aTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
-						 withRowAnimation:UITableViewRowAnimationFade];
-		
-	}
-}
-
 
 @end

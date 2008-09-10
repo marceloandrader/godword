@@ -66,12 +66,22 @@
 {
 	[table reloadData];
 	GodWordAppDelegate * appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
+	if (appDelegate.verseSelected.verseNumber > 0) {
+		NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
+		
+		[table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+		
+		[indexPath release];
+	}
 	
-	[table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-	
-	[indexPath release];
-	
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+	NSArray *array = [table indexPathsForVisibleRows];
+	if (array.count > 0){
+		GodWordAppDelegate * appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
+		appDelegate.verseSelected.verseNumber = [(NSIndexPath*)[array objectAtIndex:0] row]+1;
+	}
 }
 
 #pragma mark UITableViewDelegate
