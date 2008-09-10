@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="48"/>
+			<integer value="10"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -44,7 +44,7 @@
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUIViewController" key="IBUISelectedViewController" id="224900944">
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="774985437">
-						<string key="IBUITitle">Devotional</string>
+						<string key="IBUITitle">Devocional</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">logo7123.png</string>
@@ -56,9 +56,9 @@
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIViewController" id="732457737">
-						<string key="IBUITitle">Find Verse</string>
+						<string key="IBUITitle">Buscar</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="583148869">
-							<string key="IBUITitle">Find</string>
+							<string key="IBUITitle">Buscar</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">FindButton.png</string>
@@ -69,9 +69,9 @@
 						<string key="IBUINibName">FindVerse</string>
 					</object>
 					<object class="IBUIViewController" id="879252677">
-						<string key="IBUITitle">Read Chapter</string>
+						<string key="IBUITitle">Leer</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="518669111">
-							<string key="IBUITitle">Read</string>
+							<string key="IBUITitle">Leer</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">Notes.png</string>
@@ -270,7 +270,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>UIApplication</string>
 					<string>UIResponder</string>
-					<string>{{631, 106}, {320, 480}}</string>
+					<string>{{444, 127}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>FindVerseController</string>
@@ -429,6 +429,6 @@
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../GodWord.xcodeproj</string>
-		<int key="IBDocument.defaultPropertyAccessControl">4</int>
+		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>

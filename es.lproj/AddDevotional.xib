@@ -37,7 +37,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
-						<string key="IBUIPlaceholder">Devotional Title</string>
+						<string type="base64-UTF8" key="IBUIPlaceholder">VMOtdHVsbw</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -139,10 +139,10 @@
 							<double key="NSSize">1.500000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<string key="IBUIHighlightedTitle">Edit</string>
-						<string key="IBUIDisabledTitle">Edit</string>
-						<string key="IBUISelectedTitle">Edit</string>
-						<string key="IBUINormalTitle">Edit</string>
+						<string key="IBUIHighlightedTitle">Editar</string>
+						<string key="IBUIDisabledTitle">Editar</string>
+						<string key="IBUISelectedTitle">Editar</string>
+						<string key="IBUINormalTitle">Editar</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="533038000">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -162,10 +162,10 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="405825600"/>
-						<string key="IBUIHighlightedTitle">Edit</string>
-						<string key="IBUIDisabledTitle">Edit</string>
-						<string key="IBUISelectedTitle">Edit</string>
-						<string key="IBUINormalTitle">Edit</string>
+						<string key="IBUIHighlightedTitle">Editar</string>
+						<string key="IBUIDisabledTitle">Editar</string>
+						<string key="IBUISelectedTitle">Editar</string>
+						<string key="IBUINormalTitle">Editar</string>
 						<reference key="IBUIHighlightedTitleColor" ref="533038000"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -206,10 +206,10 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="405825600"/>
 						<bool key="IBUIShowsTouchWhenHighlighted">YES</bool>
-						<string key="IBUIHighlightedTitle">Go to Verse</string>
-						<string key="IBUIDisabledTitle">Go to Verse</string>
-						<string key="IBUISelectedTitle">Go to Verse</string>
-						<string key="IBUINormalTitle">Go to Verse</string>
+						<string type="base64-UTF8" key="IBUIHighlightedTitle">SXIgYWwgVmVyc8OtY3Vsbw</string>
+						<string type="base64-UTF8" key="IBUIDisabledTitle">SXIgYWwgVmVyc8OtY3Vsbw</string>
+						<string type="base64-UTF8" key="IBUISelectedTitle">SXIgYWwgVmVyc8OtY3Vsbw</string>
+						<string type="base64-UTF8" key="IBUINormalTitle">SXIgYWwgVmVyc8OtY3Vsbw</string>
 						<reference key="IBUIHighlightedTitleColor" ref="533038000"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>

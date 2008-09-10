@@ -39,8 +39,8 @@
 						<int key="IBSelectedSegmentIndex">0</int>
 						<object class="NSArray" key="IBSegmentTitles">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>Old</string>
-							<string>New</string>
+							<string>Antiguo</string>
+							<string>Nuevo</string>
 						</object>
 						<object class="NSMutableArray" key="IBSegmentWidths">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -88,10 +88,10 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUIHighlightedTitle">Go</string>
-						<string key="IBUIDisabledTitle">Go</string>
-						<string key="IBUISelectedTitle">Go</string>
-						<string key="IBUINormalTitle">Go</string>
+						<string key="IBUIHighlightedTitle">Ir a</string>
+						<string key="IBUIDisabledTitle">Ir a</string>
+						<string key="IBUISelectedTitle">Ir a</string>
+						<string key="IBUINormalTitle">Ir a</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>

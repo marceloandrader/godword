@@ -116,6 +116,9 @@
 			PBXPerProjectTemplateStateSaveDate = 242709263;
 			PBXWorkspaceStateSaveDate = 242709263;
 		};
+		perUserProjectItems = {
+			8D7BB6250E7778EC00E23727 /* PBXBookmark */ = 8D7BB6250E7778EC00E23727 /* PBXBookmark */;
+		};
 		sourceControlManager = 8D731F4A0E33EBD70031200B /* Source Control */;
 		userBuildSettings = {
 		};
@@ -411,19 +414,27 @@
 	};
 	8D7BB4F30E77664E00E23727 /* en */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {678, 644}}";
-			sepNavSelRange = "{129, 0}";
-			sepNavVisRange = "{29, 670}";
+			sepNavIntBoundsRect = "{{0, 0}, {655, 700}}";
+			sepNavSelRange = "{163, 0}";
+			sepNavVisRange = "{0, 167}";
 			sepNavWindowFrame = "{{180, 61}, {737, 713}}";
 		};
 	};
 	8D7BB5CB0E77732700E23727 /* es */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {678, 644}}";
+			sepNavIntBoundsRect = "{{0, 0}, {655, 630}}";
 			sepNavSelRange = "{736, 0}";
-			sepNavVisRange = "{31, 709}";
+			sepNavVisRange = "{0, 176}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
+	};
+	8D7BB6250E7778EC00E23727 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D7BB6260E7778EC00E23727;
+	};
+	8D7BB6260E7778EC00E23727 = {
+		isa = PBXFileReference;
+		sourceTree = "<group>";
 	};
 	8D89588F0E5114BB00BFF4DA /* Bookmark.h */ = {
 		uiCtxt = {

@@ -97,12 +97,12 @@
 					<object class="IBUILabel" id="1042574787">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 156}, {168, 21}}</string>
+						<string key="NSFrame">{{20, 156}, {193, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string type="base64-UTF8" key="IBUIText">Q3XDoWwgZXMgbGEgZW5zZcOxYW56YSBwcmluY2lwYWw/A</string>
+						<string key="IBUIText">Which is the main learn in this verse?</string>
 						<object class="NSColor" key="IBUITextColor" id="886799724">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -114,12 +114,12 @@
 					<object class="IBUILabel" id="553063733">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 259}, {162, 21}}</string>
+						<string key="NSFrame">{{20, 259}, {212, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string type="base64-UTF8" key="IBUIText">Q8OzbW8gcHVlZG8gYXBsaWNhcmxvIGEgbWkgdmlkYT8</string>
+						<string key="IBUIText">How can you apply this verse in your life?</string>
 						<reference key="IBUITextColor" ref="886799724"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
