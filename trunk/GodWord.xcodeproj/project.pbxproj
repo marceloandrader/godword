@@ -38,6 +38,7 @@
 		8D79AE760E5521EA00CAC6DF /* BookmarkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D79AE750E5521EA00CAC6DF /* BookmarkListController.m */; };
 		8D7ADC0A0E6E306C00A5A7E9 /* logo7123.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7ADC090E6E306C00A5A7E9 /* logo7123.png */; };
 		8D7B59A10E4A8EE4005DA8D9 /* ReadChapter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */; };
+		8D7BB4F40E77664E00E23727 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BB4F20E77664E00E23727 /* Localizable.strings */; };
 		8D8958910E5114BB00BFF4DA /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8958900E5114BB00BFF4DA /* Bookmark.m */; };
 		8DD0F6290E64E445008AF516 /* Devotional.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0F6280E64E445008AF516 /* Devotional.m */; };
 		8DD0F6540E64E865008AF516 /* DevotionalNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0F6530E64E865008AF516 /* DevotionalNavController.m */; };
@@ -64,8 +65,8 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D51C52B0E3404CA004F21B9 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWindowController.h; path = Classes/MainWindowController.h; sourceTree = "<group>"; };
 		8D51C52C0E3404CA004F21B9 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainWindowController.m; path = Classes/MainWindowController.m; sourceTree = "<group>"; };
-		8D51C5330E340579004F21B9 /* GodWordAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GodWordAppDelegate.h; sourceTree = "<group>"; };
-		8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GodWordAppDelegate.m; sourceTree = "<group>"; };
+		8D51C5330E340579004F21B9 /* GodWordAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GodWordAppDelegate.h; path = Classes/GodWordAppDelegate.h; sourceTree = "<group>"; };
+		8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GodWordAppDelegate.m; path = Classes/GodWordAppDelegate.m; sourceTree = "<group>"; };
 		8D51C5600E3406B3004F21B9 /* FindVerseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindVerseController.h; path = Classes/FindVerseController.h; sourceTree = "<group>"; };
 		8D51C5610E3406B3004F21B9 /* FindVerseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindVerseController.m; path = Classes/FindVerseController.m; sourceTree = "<group>"; };
 		8D51C5800E3407CF004F21B9 /* FindVerse.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FindVerse.xib; path = ibresources/FindVerse.xib; sourceTree = "<group>"; };
@@ -78,53 +79,54 @@
 		8D51C6130E340FBD004F21B9 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Classes/Book.m; sourceTree = "<group>"; };
 		8D51C64A0E341202004F21B9 /* ReadChapterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadChapterController.h; path = Classes/ReadChapterController.h; sourceTree = "<group>"; };
 		8D51C64B0E341202004F21B9 /* ReadChapterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReadChapterController.m; path = Classes/ReadChapterController.m; sourceTree = "<group>"; };
-		8D650CB20E5BA70D004536A2 /* logo712.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo712.png; sourceTree = "<group>"; };
+		8D650CB20E5BA70D004536A2 /* logo712.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo712.png; path = images/logo712.png; sourceTree = "<group>"; };
 		8D650E2F0E5BCE09004536A2 /* AddFolderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFolderController.h; path = Classes/AddFolderController.h; sourceTree = "<group>"; };
 		8D650E300E5BCE09004536A2 /* AddFolderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFolderController.m; path = Classes/AddFolderController.m; sourceTree = "<group>"; };
-		8D650E320E5BCE6A004536A2 /* AddFolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFolder.xib; sourceTree = "<group>"; };
+		8D650E320E5BCE6A004536A2 /* AddFolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddFolder.xib; path = ibresources/AddFolder.xib; sourceTree = "<group>"; };
 		8D6F6DF70E3AAE2B001CD57E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8D731F760E33EE9A0031200B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		8D73206F0E3403010031200B /* FindButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FindButton.png; sourceTree = "<group>"; };
+		8D731F760E33EE9A0031200B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
+		8D73206F0E3403010031200B /* FindButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FindButton.png; path = images/FindButton.png; sourceTree = "<group>"; };
 		8D75037F0E4E846300BF500F /* BookmarkFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkFolder.h; path = Classes/BookmarkFolder.h; sourceTree = "<group>"; };
 		8D7503800E4E846300BF500F /* BookmarkFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkFolder.m; path = Classes/BookmarkFolder.m; sourceTree = "<group>"; };
 		8D7503F90E4E8B2100BF500F /* AddBookmarkItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddBookmarkItem.xib; path = ibresources/AddBookmarkItem.xib; sourceTree = "<group>"; };
 		8D7503FE0E4E8C5500BF500F /* AddBookmarkItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddBookmarkItemController.h; path = Classes/AddBookmarkItemController.h; sourceTree = "<group>"; };
 		8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBookmarkItemController.m; path = Classes/AddBookmarkItemController.m; sourceTree = "<group>"; };
-		8D75933F0E3FF84000BD8777 /* VerseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerseCell.h; sourceTree = "<group>"; };
-		8D7593400E3FF84000BD8777 /* VerseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerseCell.m; sourceTree = "<group>"; };
+		8D75933F0E3FF84000BD8777 /* VerseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerseCell.h; path = Classes/VerseCell.h; sourceTree = "<group>"; };
+		8D7593400E3FF84000BD8777 /* VerseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerseCell.m; path = Classes/VerseCell.m; sourceTree = "<group>"; };
 		8D7604350E664DC70028B85F /* EditTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTextViewController.h; path = Classes/EditTextViewController.h; sourceTree = "<group>"; };
 		8D7604360E664DC70028B85F /* EditTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTextViewController.m; path = Classes/EditTextViewController.m; sourceTree = "<group>"; };
-		8D76049E0E6655A10028B85F /* CellTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTextView.h; sourceTree = "<group>"; };
-		8D76049F0E6655A10028B85F /* CellTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextView.m; sourceTree = "<group>"; };
+		8D76049E0E6655A10028B85F /* CellTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellTextView.h; path = Classes/CellTextView.h; sourceTree = "<group>"; };
+		8D76049F0E6655A10028B85F /* CellTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellTextView.m; path = Classes/CellTextView.m; sourceTree = "<group>"; };
 		8D7827F10E58FFE100378BFF /* BookmarkGroupListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkGroupListController.h; path = Classes/BookmarkGroupListController.h; sourceTree = "<group>"; };
 		8D7827F20E58FFE100378BFF /* BookmarkGroupListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkGroupListController.m; path = Classes/BookmarkGroupListController.m; sourceTree = "<group>"; };
 		8D7829170E590E7A00378BFF /* BookmarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkCell.h; path = Classes/BookmarkCell.h; sourceTree = "<group>"; };
 		8D7829180E590E7A00378BFF /* BookmarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkCell.m; path = Classes/BookmarkCell.m; sourceTree = "<group>"; };
 		8D79AE740E5521EA00CAC6DF /* BookmarkListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarkListController.h; path = Classes/BookmarkListController.h; sourceTree = "<group>"; };
 		8D79AE750E5521EA00CAC6DF /* BookmarkListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarkListController.m; path = Classes/BookmarkListController.m; sourceTree = "<group>"; };
-		8D7ADC090E6E306C00A5A7E9 /* logo7123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo7123.png; sourceTree = "<group>"; };
-		8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadChapter.xib; sourceTree = "<group>"; };
+		8D7ADC090E6E306C00A5A7E9 /* logo7123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo7123.png; path = images/logo7123.png; sourceTree = "<group>"; };
+		8D7B59A00E4A8EE4005DA8D9 /* ReadChapter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ReadChapter.xib; path = ibresources/ReadChapter.xib; sourceTree = "<group>"; };
+		8D7BB4F30E77664E00E23727 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D89588F0E5114BB00BFF4DA /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bookmark.h; path = Classes/Bookmark.h; sourceTree = "<group>"; };
 		8D8958900E5114BB00BFF4DA /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bookmark.m; path = Classes/Bookmark.m; sourceTree = "<group>"; };
 		8DD0F6270E64E445008AF516 /* Devotional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Devotional.h; path = Classes/Devotional.h; sourceTree = "<group>"; };
 		8DD0F6280E64E445008AF516 /* Devotional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Devotional.m; path = Classes/Devotional.m; sourceTree = "<group>"; };
 		8DD0F6520E64E865008AF516 /* DevotionalNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DevotionalNavController.h; path = Classes/DevotionalNavController.h; sourceTree = "<group>"; };
 		8DD0F6530E64E865008AF516 /* DevotionalNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DevotionalNavController.m; path = Classes/DevotionalNavController.m; sourceTree = "<group>"; };
-		8DD0F6550E64E87A008AF516 /* DevotionalListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevotionalListController.h; sourceTree = "<group>"; };
-		8DD0F6560E64E87A008AF516 /* DevotionalListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevotionalListController.m; sourceTree = "<group>"; };
+		8DD0F6550E64E87A008AF516 /* DevotionalListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DevotionalListController.h; path = Classes/DevotionalListController.h; sourceTree = "<group>"; };
+		8DD0F6560E64E87A008AF516 /* DevotionalListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DevotionalListController.m; path = Classes/DevotionalListController.m; sourceTree = "<group>"; };
 		8DD0F65A0E64E9B9008AF516 /* DevotionalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DevotionalCell.h; path = Classes/DevotionalCell.h; sourceTree = "<group>"; };
 		8DD0F65B0E64E9B9008AF516 /* DevotionalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DevotionalCell.m; path = Classes/DevotionalCell.m; sourceTree = "<group>"; };
 		8DD0F7190E64F6EA008AF516 /* AddDevotional.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddDevotional.xib; path = ibresources/AddDevotional.xib; sourceTree = "<group>"; };
 		8DD0F71C0E64F87B008AF516 /* AddDevotionalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddDevotionalController.h; path = Classes/AddDevotionalController.h; sourceTree = "<group>"; };
 		8DD0F71D0E64F87B008AF516 /* AddDevotionalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddDevotionalController.m; path = Classes/AddDevotionalController.m; sourceTree = "<group>"; };
-		8DDCE7F70E36C93500ECAF65 /* Bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bookmark.png; sourceTree = "<group>"; };
-		8DDCE7FA0E36CA8500ECAF65 /* Devotional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Devotional.png; sourceTree = "<group>"; };
-		8DDCE7FE0E36CAC200ECAF65 /* Notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Notes.png; sourceTree = "<group>"; };
+		8DDCE7F70E36C93500ECAF65 /* Bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bookmark.png; path = images/Bookmark.png; sourceTree = "<group>"; };
+		8DDCE7FA0E36CA8500ECAF65 /* Devotional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Devotional.png; path = images/Devotional.png; sourceTree = "<group>"; };
+		8DDCE7FE0E36CAC200ECAF65 /* Notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Notes.png; path = images/Notes.png; sourceTree = "<group>"; };
 		8DDCE8070E36CD1100ECAF65 /* Verse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Verse.h; path = Classes/Verse.h; sourceTree = "<group>"; };
 		8DDCE8080E36CD1100ECAF65 /* Verse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Verse.m; path = Classes/Verse.m; sourceTree = "<group>"; };
-		8DFDA0FE0E4942AF0049F120 /* AddBookmark.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBookmark.xib; sourceTree = "<group>"; };
-		8DFDA1010E4943500049F120 /* AddBookmarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBookmarkController.h; sourceTree = "<group>"; };
-		8DFDA1020E4943500049F120 /* AddBookmarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBookmarkController.m; sourceTree = "<group>"; };
+		8DFDA0FE0E4942AF0049F120 /* AddBookmark.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddBookmark.xib; path = ibresources/AddBookmark.xib; sourceTree = "<group>"; };
+		8DFDA1010E4943500049F120 /* AddBookmarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddBookmarkController.h; path = Classes/AddBookmarkController.h; sourceTree = "<group>"; };
+		8DFDA1020E4943500049F120 /* AddBookmarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBookmarkController.m; path = Classes/AddBookmarkController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,12 +155,13 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				8D51C5930E34090A004F21B9 /* Classes */,
+				8D7BB5500E776AFB00E23727 /* Model */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				8D51C52E0E3404D2004F21B9 /* Controllers */,
+				8D7BB54E0E776AE100E23727 /* Cells */,
+				8D7BB54F0E776AEE00E23727 /* Controllers */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -166,6 +169,10 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8D51C5330E340579004F21B9 /* GodWordAppDelegate.h */,
+				8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */,
+				8D51C5980E34092C004F21B9 /* BibleDatabase.h */,
+				8D51C5990E34092C004F21B9 /* BibleDatabase.m */,
 				32CA4F630368D1EE00C91783 /* GodWord_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -191,6 +198,7 @@
 				8D7503F90E4E8B2100BF500F /* AddBookmarkItem.xib */,
 				8D650E320E5BCE6A004536A2 /* AddFolder.xib */,
 				8DD0F7190E64F6EA008AF516 /* AddDevotional.xib */,
+				8D7BB4F20E77664E00E23727 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -206,11 +214,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8D51C52E0E3404D2004F21B9 /* Controllers */ = {
+		8D7BB54E0E776AE100E23727 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				8D76049E0E6655A10028B85F /* CellTextView.h */,
 				8D76049F0E6655A10028B85F /* CellTextView.m */,
+				8D75933F0E3FF84000BD8777 /* VerseCell.h */,
+				8D7593400E3FF84000BD8777 /* VerseCell.m */,
+				8D7829170E590E7A00378BFF /* BookmarkCell.h */,
+				8D7829180E590E7A00378BFF /* BookmarkCell.m */,
+				8DD0F65A0E64E9B9008AF516 /* DevotionalCell.h */,
+				8DD0F65B0E64E9B9008AF516 /* DevotionalCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		8D7BB54F0E776AEE00E23727 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				8DFDA1010E4943500049F120 /* AddBookmarkController.h */,
 				8DFDA1020E4943500049F120 /* AddBookmarkController.m */,
 				8D51C5600E3406B3004F21B9 /* FindVerseController.h */,
@@ -219,24 +240,18 @@
 				8D51C52C0E3404CA004F21B9 /* MainWindowController.m */,
 				8D51C64A0E341202004F21B9 /* ReadChapterController.h */,
 				8D51C64B0E341202004F21B9 /* ReadChapterController.m */,
-				8D75933F0E3FF84000BD8777 /* VerseCell.h */,
-				8D7593400E3FF84000BD8777 /* VerseCell.m */,
 				8D7503FE0E4E8C5500BF500F /* AddBookmarkItemController.h */,
 				8D7503FF0E4E8C5500BF500F /* AddBookmarkItemController.m */,
 				8D79AE740E5521EA00CAC6DF /* BookmarkListController.h */,
 				8D79AE750E5521EA00CAC6DF /* BookmarkListController.m */,
 				8D7827F10E58FFE100378BFF /* BookmarkGroupListController.h */,
 				8D7827F20E58FFE100378BFF /* BookmarkGroupListController.m */,
-				8D7829170E590E7A00378BFF /* BookmarkCell.h */,
-				8D7829180E590E7A00378BFF /* BookmarkCell.m */,
 				8D650E2F0E5BCE09004536A2 /* AddFolderController.h */,
 				8D650E300E5BCE09004536A2 /* AddFolderController.m */,
 				8DD0F6520E64E865008AF516 /* DevotionalNavController.h */,
 				8DD0F6530E64E865008AF516 /* DevotionalNavController.m */,
 				8DD0F6550E64E87A008AF516 /* DevotionalListController.h */,
 				8DD0F6560E64E87A008AF516 /* DevotionalListController.m */,
-				8DD0F65A0E64E9B9008AF516 /* DevotionalCell.h */,
-				8DD0F65B0E64E9B9008AF516 /* DevotionalCell.m */,
 				8DD0F71C0E64F87B008AF516 /* AddDevotionalController.h */,
 				8DD0F71D0E64F87B008AF516 /* AddDevotionalController.m */,
 				8D7604350E664DC70028B85F /* EditTextViewController.h */,
@@ -247,13 +262,9 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		8D51C5930E34090A004F21B9 /* Classes */ = {
+		8D7BB5500E776AFB00E23727 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8D51C5330E340579004F21B9 /* GodWordAppDelegate.h */,
-				8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */,
-				8D51C5980E34092C004F21B9 /* BibleDatabase.h */,
-				8D51C5990E34092C004F21B9 /* BibleDatabase.m */,
 				8D51C6120E340FBD004F21B9 /* Book.h */,
 				8D51C6130E340FBD004F21B9 /* Book.m */,
 				8DDCE8070E36CD1100ECAF65 /* Verse.h */,
@@ -265,7 +276,7 @@
 				8DD0F6270E64E445008AF516 /* Devotional.h */,
 				8DD0F6280E64E445008AF516 /* Devotional.m */,
 			);
-			name = Classes;
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,13 @@
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GodWord" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,6 +343,7 @@
 				8D650E330E5BCE6A004536A2 /* AddFolder.xib in Resources */,
 				8DD0F71A0E64F6EA008AF516 /* AddDevotional.xib in Resources */,
 				8D7ADC0A0E6E306C00A5A7E9 /* logo7123.png in Resources */,
+				8D7BB4F40E77664E00E23727 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +383,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D7BB4F20E77664E00E23727 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D7BB4F30E77664E00E23727 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
