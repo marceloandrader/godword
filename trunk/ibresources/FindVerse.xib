@@ -66,7 +66,7 @@
 					<object class="IBUIPickerView" id="401257425">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">296</int>
-						<string key="NSFrame">{{0, 132}, {320, 216}}</string>
+						<string key="NSFrame">{{0, 109}, {320, 216}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -75,8 +75,8 @@
 					</object>
 					<object class="IBUIButton" id="438834326">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">264</int>
-						<string key="NSFrame">{{124, 423}, {72, 37}}</string>
+						<int key="NSvFlags">296</int>
+						<string key="NSFrame">{{124, 370}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -181,9 +181,9 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="998211967"/>
 							<reference ref="438834326"/>
 							<reference ref="401257425"/>
-							<reference ref="998211967"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -232,7 +232,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>FindVerseController</string>
 					<string>UIResponder</string>
-					<string>{{153, 144}, {320, 480}}</string>
+					<string>{{364, 144}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
