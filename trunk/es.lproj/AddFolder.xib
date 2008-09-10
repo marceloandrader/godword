@@ -37,7 +37,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
-						<string key="IBUIPlaceholder">Description of Folder</string>
+						<string type="base64-UTF8" key="IBUIPlaceholder">RGVzY3JpcGNpw7NuIGRlIGxhIENhcnBldGE</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -203,7 +203,7 @@
 			</object>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.LastKnownRelativeProjectPath">GodWord.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../GodWord.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>

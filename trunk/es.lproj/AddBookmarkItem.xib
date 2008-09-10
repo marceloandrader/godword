@@ -35,7 +35,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="IBUIText">Description</string>
+						<string type="base64-UTF8" key="IBUIText">RGVzY3JpcGNpw7NuA</string>
 						<object class="NSColor" key="IBUITextColor" id="389961022">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -86,10 +86,10 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUIHighlightedTitle">Add</string>
-						<string key="IBUIDisabledTitle">Add</string>
-						<string key="IBUISelectedTitle">Add</string>
-						<string key="IBUINormalTitle">Add</string>
+						<string key="IBUIHighlightedTitle">Agregar</string>
+						<string key="IBUIDisabledTitle">Agregar</string>
+						<string key="IBUISelectedTitle">Agregar</string>
+						<string key="IBUINormalTitle">Agregar</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -107,7 +107,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="IBUIText">Verse</string>
+						<string type="base64-UTF8" key="IBUIText">VmVyc8OtY3Vsbw</string>
 						<reference key="IBUITextColor" ref="389961022"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
