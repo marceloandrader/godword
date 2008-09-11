@@ -68,19 +68,21 @@
 	GodWordAppDelegate * appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
 	if (appDelegate.verseSelected.verseNumber > 0) {
 		NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
-		
-		[table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-		
-		[indexPath release];
+
+		[table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+		rowTapped = -1;
 	}
 	
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
 	NSArray *array = [table indexPathsForVisibleRows];
-	if (array.count > 0){
+	
+	if (array.count > 0 && rowTapped == -1){
 		GodWordAppDelegate * appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
 		appDelegate.verseSelected.verseNumber = [(NSIndexPath*)[array objectAtIndex:0] row]+1;
+		if (appDelegate.verseSelected.verseNumber > 1)
+			appDelegate.verseSelected.verseNumber = appDelegate.verseSelected.verseNumber + 1;
 	}
 }
 
@@ -170,7 +172,7 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+- (void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
 	rowTapped = [indexPath row];
 	GodWordAppDelegate * delegate = (GodWordAppDelegate*) [[UIApplication sharedApplication] delegate];
 	delegate.verseSelected.verseNumber = rowTapped + 1;
