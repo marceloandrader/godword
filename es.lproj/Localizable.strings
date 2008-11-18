@@ -14,10 +14,10 @@
 "Read" = "Leer";
 
 /* Bookmark */
-"Bookmark" = "Bookmark";
+"Bookmark" = "Favorito";
 
 /* Bookmark Folders */
-"Bookmark Folders" = "Carpetas de Bookmark";
+"Bookmark Folders" = "Carpetas de Favoritos";
 
 /* Cancel */
 "Cancel" = "Cancelar";
@@ -32,7 +32,7 @@
 "Save this verse to:" = "Guardar este versículo a:";
 
 /* Add Bookmark */
-"Add Bookmark" = "Agregar Bookmark";
+"Add Bookmark" = "Agregar Favorito";
 
 /* Add Folder */
 "Add Folder" = "Agregar Carpeta";
@@ -43,3 +43,6 @@
 /* Verse not found */
 "Verse not found" = "Versículo no encontrado";
 
+"Add new folder" = "Nueva Carpeta";
+
+"bible.db" = "bible_es.db";

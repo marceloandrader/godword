@@ -48,6 +48,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
 	[self.table reloadData];
+	NSLog(@"reload Data bookmarks");
 }
 
 /*
@@ -80,11 +81,6 @@
 - (UITableViewCell *) tableView:(UITableView *) tableView 
 		  cellForRowAtIndexPath:(NSIndexPath *) indexPath 
 {
-	//BookmarkCell *cell = (BookmarkCell*) [tableView dequeueReusableCellWithIdentifier:@"BookmarkCellList"];
-//	if (cell == nil) {
-//		cell = [[BookmarkCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"BookmarkCellList"];
-//	}
-	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookmarkCellList"];
 	
 	if (cell == nil) {
@@ -94,9 +90,7 @@
 	
 	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
 	BookmarkFolder *bookmarkFolder = (BookmarkFolder *)[appDelegate.bible.bookmarkFolders objectAtIndex:[indexPath row]];	
-//	Bookmark *bookmark = (Bookmark*)[bookmarkFolder.bookmarks objectAtIndex:[indexPath row]];
-//	cell.descriptionLabel.text = bookmark.description;
-//	cell.verse.text = bookmark.verseNo;
+
 	cell.text = [NSString stringWithFormat:@"%@ (%d)", bookmarkFolder.title, bookmarkFolder.bookmarks.count];
 	return cell;
 }
