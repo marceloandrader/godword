@@ -11,11 +11,16 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		8D0BB0320E7618A7008955DD /* BookmarksOfFolderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0BB0310E7618A7008955DD /* BookmarksOfFolderController.m */; };
+		8D2420A00EC91E5E003D1DD3 /* logo83.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D24209D0EC91E5E003D1DD3 /* logo83.png */; };
+		8D2420A10EC91E5E003D1DD3 /* logo91.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D24209E0EC91E5E003D1DD3 /* logo91.png */; };
+		8D2420B80EC9288B003D1DD3 /* logo9.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2420B70EC9288B003D1DD3 /* logo9.png */; };
+		8D2420E70EC92CE0003D1DD3 /* bible_en.db in Resources */ = {isa = PBXBuildFile; fileRef = 8D2420E60EC92CE0003D1DD3 /* bible_en.db */; };
+		8D24210B0EC93430003D1DD3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D24210A0EC93430003D1DD3 /* Default.png */; };
 		8D51C52D0E3404CA004F21B9 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D51C52C0E3404CA004F21B9 /* MainWindowController.m */; };
 		8D51C5350E340579004F21B9 /* GodWordAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */; };
 		8D51C5620E3406B3004F21B9 /* FindVerseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D51C5610E3406B3004F21B9 /* FindVerseController.m */; };
 		8D51C58A0E340843004F21B9 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D51C5890E340843004F21B9 /* libsqlite3.0.dylib */; };
-		8D51C58C0E3408AA004F21B9 /* bible.db in Resources */ = {isa = PBXBuildFile; fileRef = 8D51C58B0E3408AA004F21B9 /* bible.db */; };
+		8D51C58C0E3408AA004F21B9 /* bible_es.db in Resources */ = {isa = PBXBuildFile; fileRef = 8D51C58B0E3408AA004F21B9 /* bible_es.db */; };
 		8D51C59A0E34092C004F21B9 /* BibleDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D51C5990E34092C004F21B9 /* BibleDatabase.m */; };
 		8D51C6140E340FBD004F21B9 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D51C6130E340FBD004F21B9 /* Book.m */; };
 		8D51C64C0E341202004F21B9 /* ReadChapterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D51C64B0E341202004F21B9 /* ReadChapterController.m */; };
@@ -60,9 +65,14 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* GodWord_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GodWord_Prefix.pch; sourceTree = "<group>"; };
+		8D098A850ECA8782009DEE31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D0BB0300E7618A7008955DD /* BookmarksOfFolderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookmarksOfFolderController.h; path = Classes/BookmarksOfFolderController.h; sourceTree = "<group>"; };
 		8D0BB0310E7618A7008955DD /* BookmarksOfFolderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookmarksOfFolderController.m; path = Classes/BookmarksOfFolderController.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D24209D0EC91E5E003D1DD3 /* logo83.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo83.png; path = images/logo83.png; sourceTree = "<group>"; };
+		8D24209E0EC91E5E003D1DD3 /* logo91.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo91.png; path = images/logo91.png; sourceTree = "<group>"; };
+		8D2420B70EC9288B003D1DD3 /* logo9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo9.png; path = images/logo9.png; sourceTree = "<group>"; };
+		8D2420E60EC92CE0003D1DD3 /* bible_en.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bible_en.db; sourceTree = "<group>"; };
+		8D24210A0EC93430003D1DD3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
 		8D51C52B0E3404CA004F21B9 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWindowController.h; path = Classes/MainWindowController.h; sourceTree = "<group>"; };
 		8D51C52C0E3404CA004F21B9 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainWindowController.m; path = Classes/MainWindowController.m; sourceTree = "<group>"; };
 		8D51C5330E340579004F21B9 /* GodWordAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GodWordAppDelegate.h; path = Classes/GodWordAppDelegate.h; sourceTree = "<group>"; };
@@ -70,7 +80,7 @@
 		8D51C5600E3406B3004F21B9 /* FindVerseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindVerseController.h; path = Classes/FindVerseController.h; sourceTree = "<group>"; };
 		8D51C5610E3406B3004F21B9 /* FindVerseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindVerseController.m; path = Classes/FindVerseController.m; sourceTree = "<group>"; };
 		8D51C5890E340843004F21B9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		8D51C58B0E3408AA004F21B9 /* bible.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bible.db; sourceTree = "<group>"; };
+		8D51C58B0E3408AA004F21B9 /* bible_es.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bible_es.db; sourceTree = "<group>"; };
 		8D51C5980E34092C004F21B9 /* BibleDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BibleDatabase.h; path = Classes/BibleDatabase.h; sourceTree = "<group>"; };
 		8D51C5990E34092C004F21B9 /* BibleDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BibleDatabase.m; path = Classes/BibleDatabase.m; sourceTree = "<group>"; };
 		8D51C6120E340FBD004F21B9 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Classes/Book.h; sourceTree = "<group>"; };
@@ -190,6 +200,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D098A850ECA8782009DEE31 /* Info.plist */,
+				8D24210A0EC93430003D1DD3 /* Default.png */,
+				8D2420E60EC92CE0003D1DD3 /* bible_en.db */,
+				8D2420B70EC9288B003D1DD3 /* logo9.png */,
+				8D24209D0EC91E5E003D1DD3 /* logo83.png */,
+				8D24209E0EC91E5E003D1DD3 /* logo91.png */,
 				8D7BB5F00E77751100E23727 /* AddBookmark.xib */,
 				8D7BB5F20E77751100E23727 /* AddBookmarkItem.xib */,
 				8D7BB5F40E77751100E23727 /* AddDevotional.xib */,
@@ -202,10 +218,9 @@
 				8DDCE7FE0E36CAC200ECAF65 /* Notes.png */,
 				8DDCE7FA0E36CA8500ECAF65 /* Devotional.png */,
 				8DDCE7F70E36C93500ECAF65 /* Bookmark.png */,
-				8D51C58B0E3408AA004F21B9 /* bible.db */,
+				8D51C58B0E3408AA004F21B9 /* bible_es.db */,
 				8D73206F0E3403010031200B /* FindButton.png */,
 				8D731F760E33EE9A0031200B /* Icon.png */,
-				8D1107310486CEB800E47090 /* Info.plist */,
 				8D7BB4F20E77664E00E23727 /* Localizable.strings */,
 			);
 			name = Resources;
@@ -339,7 +354,7 @@
 			files = (
 				8D731F770E33EE9A0031200B /* Icon.png in Resources */,
 				8D7320700E3403010031200B /* FindButton.png in Resources */,
-				8D51C58C0E3408AA004F21B9 /* bible.db in Resources */,
+				8D51C58C0E3408AA004F21B9 /* bible_es.db in Resources */,
 				8DDCE7F80E36C93500ECAF65 /* Bookmark.png in Resources */,
 				8DDCE7FB0E36CA8500ECAF65 /* Devotional.png in Resources */,
 				8DDCE7FF0E36CAC200ECAF65 /* Notes.png in Resources */,
@@ -353,6 +368,11 @@
 				8D7BB6020E77751100E23727 /* FindVerse.xib in Resources */,
 				8D7BB6030E77751100E23727 /* MainWindow.xib in Resources */,
 				8D7BB6040E77751100E23727 /* ReadChapter.xib in Resources */,
+				8D2420A00EC91E5E003D1DD3 /* logo83.png in Resources */,
+				8D2420A10EC91E5E003D1DD3 /* logo91.png in Resources */,
+				8D2420B80EC9288B003D1DD3 /* logo9.png in Resources */,
+				8D2420E70EC92CE0003D1DD3 /* bible_en.db in Resources */,
+				8D24210B0EC93430003D1DD3 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,17 +515,44 @@
 			};
 			name = Release;
 		};
+		8D7FC5680ECD2249007255DD /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.0;
+			};
+			name = Distribution;
+		};
+		8D7FC5690ECD2249007255DD /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Marcelo Andrade";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GodWord_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = GodWord;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7448C95C-4EA3-4DD7-9E50-A445199E8EFE";
+			};
+			name = Distribution;
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Marcelo Andrade";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator2.0;
+				SDKROOT = iphoneos2.0;
 			};
 			name = Debug;
 		};
@@ -513,12 +560,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator2.0;
+				SDKROOT = iphoneos2.0;
 			};
 			name = Release;
 		};
@@ -530,6 +577,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				8D7FC5690ECD2249007255DD /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -539,6 +587,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				8D7FC5680ECD2249007255DD /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

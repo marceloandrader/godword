@@ -79,7 +79,7 @@
 
 		cell.text = bookmarFolder.title;
 	} else {
-		cell.text = @"Add new folder";
+		cell.text = NSLocalizedString(@"Add new folder",@"Add new folder");
 	}
 	
 	return cell;
@@ -116,7 +116,14 @@
 		
 		GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
 		
-		BookmarkFolder * folderToEdit = [appDelegate.bible.bookmarkFolders objectAtIndex:indexPath.row];
+		BookmarkFolder * folderToEdit ;
+		
+		if ([appDelegate.bible.bookmarkFolders count] == 0 || indexPath.row >= [appDelegate.bible.bookmarkFolders count]){
+			folderToEdit = [[BookmarkFolder alloc] initWithPrimaryKey:0 title:@""];
+		}else
+		{
+			folderToEdit = [appDelegate.bible.bookmarkFolders objectAtIndex:indexPath.row];
+		}
 		
 		AddFolderController *addFolderController = [[[AddFolderController alloc] initWithNibName:@"AddFolder" bundle:[NSBundle mainBundle]
 		] autorelease];

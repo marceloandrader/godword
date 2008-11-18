@@ -36,7 +36,7 @@
 	NSInteger verseId  = [[NSUserDefaults standardUserDefaults] integerForKey:@"verseId"];
 	NSInteger tabSelected  = [[NSUserDefaults standardUserDefaults] integerForKey:@"tabSelected"];
 	if (verseId==0) {
-		verseId = 10;
+		verseId = 261370;
 	}
 	[bible refreshVerseFromVerseId:verseId verse:verse];
 	tabBarController.selectedIndex = tabSelected;
