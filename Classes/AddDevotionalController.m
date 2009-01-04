@@ -148,7 +148,9 @@
 - (IBAction) goToVerse: (id) sender{
 
 	GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
+    
+   	[appDelegate.bible refreshVerseFromVerseId:devotional.verse verse:appDelegate.verseSelected];
+    
 	appDelegate.tabBarController.selectedIndex = 1;
 	
 	

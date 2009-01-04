@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MainWindowController : UIViewController <UITabBarDelegate>{
+@interface MainWindowController : UIViewController <UITabBarDelegate> {
 
 }
 

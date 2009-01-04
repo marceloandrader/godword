@@ -69,7 +69,7 @@
 	if (appDelegate.verseSelected.verseNumber > 0) {
 		NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(appDelegate.verseSelected.verseNumber-1) inSection:0];
 
-		[table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+		[table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 		rowTapped = -1;
 	}
 	
@@ -105,7 +105,7 @@
 		book = (Book*) [appDelegate.bible.booksFromNew 
 						objectAtIndex: appDelegate.verseSelected.bookNumber];
 	
-	cell.verseText.text = [[NSString alloc] initWithFormat:@"%d. %@", indexPath.row+1, [appDelegate.bible 
+	cell.verseText.text = [NSString stringWithFormat:@"%d. %@", (indexPath.row+1), [appDelegate.bible 
 						   obtainTextVerseInBook:book 
 						   inChapter:appDelegate.verseSelected.chapterNumber 
 						   inVerse:[indexPath row]+1]];
@@ -209,8 +209,6 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
 	if (buttonIndex == 0){
 		//Bookmark
-		
-		//NSLog(@"bookmarking %d", rowTapped);
 		AddBookmarkController *bookmarkController = [[AddBookmarkController alloc] 
 													 initWithNibName:@"AddBookmark" 
 													 bundle:[NSBundle mainBundle]];
@@ -242,7 +240,6 @@
 		[navigationController release];
 	} else if (buttonIndex == 1) {
 		//Devotional
-		//NSLog(@"annotating %d", rowTapped);
 		NSDateFormatter *formatter;
 		
 		formatter = [[NSDateFormatter alloc] init];

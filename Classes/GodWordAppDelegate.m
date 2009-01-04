@@ -23,20 +23,51 @@
 @synthesize window, tabBarController, bible, verseSelected;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {	
+    NSString *langSelected = [[NSUserDefaults standardUserDefaults] stringForKey:@"app_language"];
+    if (langSelected == nil){
+        NSString *localization = NSLocalizedString(@"bible.db",@"bible_en.db");
+        langSelected = [localization substringWithRange:NSMakeRange (6,2)];
+    }
+	NSString *name = [[NSString alloc] initWithFormat:@"bible_%@.db", langSelected];
+    
 	BibleDatabase *db = [[BibleDatabase alloc] init];
 	self.bible = db;
+    self.bible.bibleName = name;
 	[db release];
+    
+    
+    double initTime, endTime;
+    initTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
 	[bible createEditableCopyOfDatabaseIfNeeded];
-	[bible initializeDatabase];
-	[bible initializeBookmarkFolders];
-	[bible initializeDevotionals];
-	Verse *verse = [[[Verse alloc] init] retain];
-	//cambiar cuando se guarde donde se quedo
+    endTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
+    NSLog(@"createEditableCopyOfDatabaseIfNeeded time %f ", (endTime-initTime));
 
-	NSInteger verseId  = [[NSUserDefaults standardUserDefaults] integerForKey:@"verseId"];
+    initTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
+	[bible initializeDatabase];
+    endTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
+    NSLog(@"initializeDatabase time %f ", (endTime-initTime));
+    
+    initTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
+	[bible initializeBookmarkFolders];
+    endTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
+    NSLog(@"initializeBookmarkFolders time %f ", (endTime-initTime));
+
+    initTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
+	[bible initializeDevotionals];
+    endTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
+    NSLog(@"initializeDevotionals time %f ", (endTime-initTime));
+
+    
+    NSInteger verseId  = [[NSUserDefaults standardUserDefaults] integerForKey:@"verseId"];
 	NSInteger tabSelected  = [[NSUserDefaults standardUserDefaults] integerForKey:@"tabSelected"];
+    
+	Verse *verse = [[[Verse alloc] init] retain];
+	
 	if (verseId==0) {
-		verseId = 261370;
+		if ([self.bible.bibleName isEqual:@"bible_fr.db"])
+			verseId = 262070;
+		else
+			verseId = 261370;
 	}
 	[bible refreshVerseFromVerseId:verseId verse:verse];
 	tabBarController.selectedIndex = tabSelected;

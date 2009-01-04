@@ -60,11 +60,11 @@
 				);
 			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
-				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					10,
+					511,
 					20,
 					48,
 					43,
@@ -110,7 +110,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					10,
+					471,
 					60,
 					20,
 					48,
@@ -127,11 +127,14 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 248324907;
-			PBXWorkspaceStateSaveDate = 248324907;
+			PBXPerProjectTemplateStateSaveDate = 252798257;
+			PBXWorkspaceStateSaveDate = 252798257;
 		};
 		perUserProjectItems = {
-			8DF7154A0EC944AE0067852D /* PlistBookmark */ = 8DF7154A0EC944AE0067852D /* PlistBookmark */;
+			8D7BC5610F11653E000F768F /* PBXTextBookmark */ = 8D7BC5610F11653E000F768F /* PBXTextBookmark */;
+			8D8E2FE90EFB50F600614FCB = 8D8E2FE90EFB50F600614FCB /* PBXTextBookmark */;
+			8D9E1C4B0F01C3A4005590FA = 8D9E1C4B0F01C3A4005590FA /* PBXTextBookmark */;
+			8DF7154A0EC944AE0067852D = 8DF7154A0EC944AE0067852D /* PlistBookmark */;
 		};
 		sourceControlManager = 8D731F4A0E33EBD70031200B /* Source Control */;
 		userBuildSettings = {
@@ -142,6 +145,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1033, 252}}";
 			sepNavSelRange = "{246, 0}";
 			sepNavVisRange = "{14, 322}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* GodWord_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 175}";
 		};
 	};
 	8D098A850ECA8782009DEE31 /* Info.plist */ = {
@@ -165,31 +175,31 @@
 	};
 	8D51C52B0E3404CA004F21B9 /* MainWindowController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 391}}";
-			sepNavSelRange = "{309, 0}";
-			sepNavVisRange = "{0, 315}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
+			sepNavSelRange = "{316, 0}";
+			sepNavVisRange = "{0, 316}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
 	8D51C52C0E3404CA004F21B9 /* MainWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 798}}";
-			sepNavSelRange = "{1177, 0}";
-			sepNavVisRange = "{603, 583}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 798}}";
+			sepNavSelRange = "{1118, 0}";
+			sepNavVisRange = "{603, 640}";
 		};
 	};
 	8D51C5330E340579004F21B9 /* GodWordAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 391}}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
 			sepNavSelRange = "{365, 0}";
 			sepNavVisRange = "{0, 617}";
 		};
 	};
 	8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 966}}";
-			sepNavSelRange = "{1109, 0}";
-			sepNavVisRange = "{638, 1086}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 1470}}";
+			sepNavSelRange = "{2461, 16}";
+			sepNavVisRange = "{1512, 1037}";
 			sepNavWindowFrame = "{{317, 130}, {750, 558}}";
 		};
 	};
@@ -203,25 +213,25 @@
 	};
 	8D51C5610E3406B3004F21B9 /* FindVerseController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {630, 2842}}";
-			sepNavSelRange = "{4552, 0}";
-			sepNavVisRange = "{4550, 763}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 2744}}";
+			sepNavSelRange = "{4554, 0}";
+			sepNavVisRange = "{4527, 786}";
 			sepNavWindowFrame = "{{218, 134}, {750, 558}}";
 		};
 	};
 	8D51C5980E34092C004F21B9 /* BibleDatabase.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 938}}";
-			sepNavSelRange = "{1564, 51}";
-			sepNavVisRange = "{895, 721}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 980}}";
+			sepNavSelRange = "{777, 0}";
+			sepNavVisRange = "{38, 790}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
 	8D51C5990E34092C004F21B9 /* BibleDatabase.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 3514}}";
-			sepNavSelRange = "{3468, 34}";
-			sepNavVisRange = "{3783, 1212}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 3668}}";
+			sepNavSelRange = "{688, 1}";
+			sepNavVisRange = "{157, 1043}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
@@ -251,9 +261,9 @@
 	};
 	8D51C64B0E341202004F21B9 /* ReadChapterController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 4074}}";
-			sepNavSelRange = "{7587, 0}";
-			sepNavVisRange = "{7378, 1067}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 4144}}";
+			sepNavSelRange = "{6463, 91}";
+			sepNavVisRange = "{6459, 1152}";
 			sepNavWindowFrame = "{{414, 118}, {750, 558}}";
 		};
 	};
@@ -322,9 +332,9 @@
 	};
 	8D7503800E4E846300BF500F /* BookmarkFolder.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {804, 1974}}";
-			sepNavSelRange = "{1226, 0}";
-			sepNavVisRange = "{754, 1627}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 2044}}";
+			sepNavSelRange = "{1014, 0}";
+			sepNavVisRange = "{640, 1451}";
 		};
 	};
 	8D7503FE0E4E8C5500BF500F /* AddBookmarkItemController.h */ = {
@@ -358,7 +368,7 @@
 	};
 	8D7604350E664DC70028B85F /* EditTextViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {726, 597}}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
 			sepNavSelRange = "{469, 0}";
 			sepNavVisRange = "{0, 491}";
 			sepNavWindowFrame = "{{15, 63}, {785, 710}}";
@@ -366,24 +376,24 @@
 	};
 	8D7604360E664DC70028B85F /* EditTextViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {725, 2588}}";
-			sepNavSelRange = "{3577, 62}";
-			sepNavVisRange = "{3448, 195}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 2492}}";
+			sepNavSelRange = "{3890, 102}";
+			sepNavVisRange = "{3799, 674}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
 	8D76049E0E6655A10028B85F /* CellTextView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {567, 391}}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
 			sepNavSelRange = "{323, 0}";
 			sepNavVisRange = "{0, 361}";
 		};
 	};
 	8D76049F0E6655A10028B85F /* CellTextView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {725, 952}}";
-			sepNavSelRange = "{1272, 2}";
-			sepNavVisRange = "{1207, 73}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 1134}}";
+			sepNavSelRange = "{110, 0}";
+			sepNavVisRange = "{0, 574}";
 		};
 	};
 	8D7827F10E58FFE100378BFF /* BookmarkGroupListController.h */ = {
@@ -434,19 +444,29 @@
 	};
 	8D7BB4F30E77664E00E23727 /* en */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 672}}";
-			sepNavSelRange = "{733, 0}";
-			sepNavVisRange = "{97, 667}";
+			sepNavIntBoundsRect = "{{0, 0}, {822, 672}}";
+			sepNavSelRange = "{0, 764}";
+			sepNavVisRange = "{128, 636}";
 			sepNavWindowFrame = "{{180, 61}, {737, 713}}";
 		};
 	};
 	8D7BB5CB0E77732700E23727 /* es */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 672}}";
-			sepNavSelRange = "{351, 0}";
-			sepNavVisRange = "{104, 701}";
+			sepNavIntBoundsRect = "{{0, 0}, {822, 700}}";
+			sepNavSelRange = "{315, 0}";
+			sepNavVisRange = "{0, 636}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
+	};
+	8D7BC5610F11653E000F768F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D76049F0E6655A10028B85F /* CellTextView.m */;
+		name = "CellTextView.m: 6";
+		rLen = 0;
+		rLoc = 110;
+		rType = 0;
+		vrLen = 574;
+		vrLoc = 0;
 	};
 	8D89588F0E5114BB00BFF4DA /* Bookmark.h */ = {
 		uiCtxt = {
@@ -463,6 +483,33 @@
 			sepNavVisRange = "{1620, 775}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
+	};
+	8D8D92790EE0931B00B4A013 /* fr */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {822, 672}}";
+			sepNavSelRange = "{554, 0}";
+			sepNavVisRange = "{137, 668}";
+		};
+	};
+	8D8E2FE90EFB50F600614FCB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D76049F0E6655A10028B85F /* CellTextView.m */;
+		name = "CellTextView.m: 75";
+		rLen = 2;
+		rLoc = 1872;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 1336;
+	};
+	8D9E1C4B0F01C3A4005590FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D76049F0E6655A10028B85F /* CellTextView.m */;
+		name = "CellTextView.m: 6";
+		rLen = 0;
+		rLoc = 110;
+		rType = 0;
+		vrLen = 574;
+		vrLoc = 0;
 	};
 	8DD0F6270E64E445008AF516 /* Devotional.h */ = {
 		uiCtxt = {
@@ -495,16 +542,16 @@
 	};
 	8DD0F6550E64E87A008AF516 /* DevotionalListController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {655, 266}}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
 			sepNavSelRange = "{336, 0}";
-			sepNavVisRange = "{49, 295}";
+			sepNavVisRange = "{0, 349}";
 		};
 	};
 	8DD0F6560E64E87A008AF516 /* DevotionalListController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {804, 2688}}";
-			sepNavSelRange = "{4958, 8}";
-			sepNavVisRange = "{4405, 850}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 2716}}";
+			sepNavSelRange = "{3685, 0}";
+			sepNavVisRange = "{3419, 1312}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
@@ -525,17 +572,17 @@
 	};
 	8DD0F71C0E64F87B008AF516 /* AddDevotionalController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {804, 574}}";
-			sepNavSelRange = "{757, 36}";
-			sepNavVisRange = "{45, 627}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 602}}";
+			sepNavSelRange = "{497, 0}";
+			sepNavVisRange = "{140, 548}";
 			sepNavWindowFrame = "{{758, 53}, {737, 713}}";
 		};
 	};
 	8DD0F71D0E64F87B008AF516 /* AddDevotionalController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 2380}}";
-			sepNavSelRange = "{4228, 14}";
-			sepNavVisRange = "{3499, 1171}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 2324}}";
+			sepNavSelRange = "{4714, 0}";
+			sepNavVisRange = "{3658, 1106}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
@@ -546,9 +593,9 @@
 	};
 	8DDCE8070E36CD1100ECAF65 /* Verse.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {655, 476}}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 476}}";
 			sepNavSelRange = "{692, 88}";
-			sepNavVisRange = "{0, 782}";
+			sepNavVisRange = "{3, 778}";
 			sepNavWindowFrame = "{{35, 39}, {737, 713}}";
 		};
 	};
@@ -578,9 +625,9 @@
 	};
 	8DFDA1020E4943500049F120 /* AddBookmarkController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 3052}}";
-			sepNavSelRange = "{3757, 0}";
-			sepNavVisRange = "{3174, 1071}";
+			sepNavIntBoundsRect = "{{0, 0}, {689, 3066}}";
+			sepNavSelRange = "{3426, 101}";
+			sepNavVisRange = "{3174, 1069}";
 			sepNavWindowFrame = "{{350, 120}, {750, 558}}";
 		};
 	};

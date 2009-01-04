@@ -25,14 +25,29 @@ NSString* kCellTextView_ID = @"CellTextView_ID";
 	{
 		// turn off selection use
 		self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+       /* CGRect frame = CGRectMake(0.0, 0.0, 100.0, 100.0);
+        
+        textView = [[[UITextView alloc] initWithFrame:frame] autorelease];
+        textView.textColor = [UIColor blackColor];
+        textView.font = [UIFont fontWithName:@"Arial" size:18.0];
+//        textView.delegate = self;
+        textView.backgroundColor = [UIColor whiteColor];
+        
+//        textView.text = txtEdited.text;
+        textView.returnKeyType = UIReturnKeyDefault;
+        textView.keyboardType = UIKeyboardTypeDefault;
+        [self.contentView addSubview:textView];
+        [self layoutSubviews];*/
 	}
 	return self;
 }
 
+
 - (void)setTextView:(UITextView *)inView
 {
 	textView = inView;
-	[self.textView retain];
+	[textView retain];
 	[self.contentView addSubview:inView];
 	[self layoutSubviews];
 }

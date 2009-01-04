@@ -1,0 +1,48 @@
+﻿/* Edit */
+"Edit" = "Éditer";
+
+/* Edit Answer */
+"Edit Answer" = "Éditer la Réponse";
+
+/* Devotionals */
+"Devotionals" = "Dévotionales";
+
+/* Folders */
+"Folders" = "Dossier";
+
+/* Read */
+"Read" = "Lire";
+
+/* Bookmark */
+"Bookmark" = "Signet";
+
+/* Bookmark Folders */
+"Bookmark Folders" = "Dossier de Signets";
+
+/* Cancel */
+"Cancel" = "Annuler";
+
+/* Devotional */
+"Devotional" = "Devotional";
+
+/* Read */
+"Read" = "Lire";
+
+/* Save this verse to: */
+"Save this verse to:" = "Enregistrer ce verset à";
+
+/* Add Bookmark */
+"Add Bookmark" = "Ajouter à Signet";
+
+/* Add Folder */
+"Add Folder" = "Ajouter le Dossier";
+
+/* Edit Folder */
+"Edit Folder" = "Éditar le Dossier";
+
+/* Verse not found */
+"Verse not found" = "Verset n'est pas trouvé";
+
+"Add new folder" = "Nouveau dossier";
+
+"bible.db" = "bible_fr.db";
