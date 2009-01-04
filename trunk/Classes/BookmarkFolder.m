@@ -8,6 +8,8 @@
 
 #import "BookmarkFolder.h"
 #import "Bookmark.h"
+#import "GodWordAppDelegate.h"
+#import "BibleDatabase.h"
 #import <sqlite3.h>
 
 static sqlite3_stmt *obtainBookmarks = nil;
@@ -36,10 +38,12 @@ static sqlite3_stmt *deleteFolder = nil;
 	NSMutableArray *bookmarkArray = [[NSMutableArray alloc] init];
     self.bookmarks = bookmarkArray;
     [bookmarkArray release];
+    
+    GodWordAppDelegate *appDelegate = (GodWordAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:NSLocalizedString(@"bible.db",@"bible_en.db")];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:appDelegate.bible.bibleName];
     if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
 		const char *sql = "select b.id, b.description, b.verse_id, v.chapter_no, v.verse_no, bo.name from bookmarks b, verses v, books bo where b.verse_id = v.id and bo.id = v.book_id and folder_id = ?";
         sqlite3_stmt *statement;

@@ -50,7 +50,7 @@
 #pragma mark Implement UITabBarDelegate
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
-	
+    NSLog(@"tab Selected = %d", tabBar.selectedItem.tag );
 }
 
 @end

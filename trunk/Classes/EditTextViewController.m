@@ -46,6 +46,7 @@
 	self.view = myTableView;
 }
 
+
 - (UITextView *)create_UITextView
 {
 	CGRect frame = CGRectMake(0.0, 0.0, 100.0, 100.0);
@@ -138,6 +139,9 @@
 		{
 			cell = [[[CellTextView alloc] initWithFrame:CGRectZero reuseIdentifier:kCellTextView_ID] autorelease];
 			((CellTextView*)cell).textView = [self create_UITextView];
+            //((CellTextView*)cell).textView.delegate = self;            
+            //((CellTextView*)cell).textView.text = txtEdited.text;
+            
 		}
 	}
 

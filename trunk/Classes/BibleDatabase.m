@@ -15,7 +15,7 @@
 
 @implementation BibleDatabase
 
-@synthesize booksFromOld, booksFromNew, bookmarkFolders, devotionals;
+@synthesize booksFromOld, booksFromNew, bookmarkFolders, devotionals, bibleName;
 
 - (void)createEditableCopyOfDatabaseIfNeeded {
     BOOL success;
@@ -23,7 +23,7 @@
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:NSLocalizedString(@"bible.db",@"bible_en.db")];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:self.bibleName];
     success = [fileManager fileExistsAtPath:writableDBPath];
     if (success) 
 	{
@@ -34,7 +34,7 @@
 		return;
 	}
     NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] 
-							   stringByAppendingPathComponent:NSLocalizedString(@"bible.db",@"bible_en.db")];
+							   stringByAppendingPathComponent:self.bibleName];
     success = [fileManager copyItemAtPath:defaultDBPath 
 								   toPath:writableDBPath 
 									error:&error];
@@ -59,7 +59,7 @@
 	
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:NSLocalizedString(@"bible.db",@"bible_en.db")];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:self.bibleName];
     if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
 		const char *sql = "select id,name,testament,(select max(chapter_no) from verses v where v.book_id = b.id) from books b where id in (select distinct book_id from verses)";
         sqlite3_stmt *statement;
@@ -92,7 +92,7 @@
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:NSLocalizedString(@"bible.db",@"bible_en.db")];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:self.bibleName];
     if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
 		const char *sql = "select * from folders";
         sqlite3_stmt *statement;
@@ -165,7 +165,7 @@
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:NSLocalizedString(@"bible.db",@"bible_en.db")];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:self.bibleName];
     if (sqlite3_open([path UTF8String], &connection) == SQLITE_OK) {
 		const char *sql = "select d.*, v.chapter_no, v.verse_no, b.name from devotionals d, books b, verses v where d.verse_id = v.id and v.book_id = b.id ";
         sqlite3_stmt *statement;

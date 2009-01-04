@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class Devotional;
+@class Verse;
 
 @interface AddDevotionalController : UIViewController {
 	//IBOutlet UILabel *verse;
@@ -22,6 +23,7 @@
 }
 
 @property(nonatomic, retain) Devotional *devotional;
+
 
 - (void) save;
 

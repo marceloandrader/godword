@@ -20,12 +20,14 @@
 	NSMutableArray *booksFromNew;
 	NSMutableArray *bookmarkFolders;
 	NSMutableArray *devotionals;
+    NSString *bibleName;
 }
 
 @property (nonatomic, retain) NSMutableArray *booksFromOld;
 @property (nonatomic, retain) NSMutableArray *booksFromNew;
 @property (nonatomic, retain) NSMutableArray *bookmarkFolders;
 @property (nonatomic, retain) NSMutableArray *devotionals;
+@property (nonatomic, retain) NSString *bibleName;
 
 - (void) createEditableCopyOfDatabaseIfNeeded ;
 

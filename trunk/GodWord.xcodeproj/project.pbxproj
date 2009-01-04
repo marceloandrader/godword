@@ -47,6 +47,8 @@
 		8D7BB6030E77751100E23727 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BB5FA0E77751100E23727 /* MainWindow.xib */; };
 		8D7BB6040E77751100E23727 /* ReadChapter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7BB5FC0E77751100E23727 /* ReadChapter.xib */; };
 		8D8958910E5114BB00BFF4DA /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8958900E5114BB00BFF4DA /* Bookmark.m */; };
+		8D8D928A0EE0976000B4A013 /* bible_fr.db in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D92890EE0976000B4A013 /* bible_fr.db */; };
+		8D9265470EF9DD3A007BCFD8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D9265460EF9DD3A007BCFD8 /* Settings.bundle */; };
 		8DD0F6290E64E445008AF516 /* Devotional.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0F6280E64E445008AF516 /* Devotional.m */; };
 		8DD0F6540E64E865008AF516 /* DevotionalNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0F6530E64E865008AF516 /* DevotionalNavController.m */; };
 		8DD0F6570E64E87A008AF516 /* DevotionalListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0F6560E64E87A008AF516 /* DevotionalListController.m */; };
@@ -128,6 +130,16 @@
 		8D7BB60B0E77755700E23727 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ReadChapter.xib; sourceTree = "<group>"; };
 		8D89588F0E5114BB00BFF4DA /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bookmark.h; path = Classes/Bookmark.h; sourceTree = "<group>"; };
 		8D8958900E5114BB00BFF4DA /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bookmark.m; path = Classes/Bookmark.m; sourceTree = "<group>"; };
+		8D8D92790EE0931B00B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8D8D927A0EE0936300B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddFolder.xib; sourceTree = "<group>"; };
+		8D8D927B0EE0936300B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddBookmarkItem.xib; sourceTree = "<group>"; };
+		8D8D927C0EE0936300B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddBookmark.xib; sourceTree = "<group>"; };
+		8D8D927D0EE0936300B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddDevotional.xib; sourceTree = "<group>"; };
+		8D8D927E0EE0936300B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		8D8D927F0EE0936300B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/FindVerse.xib; sourceTree = "<group>"; };
+		8D8D92800EE0936300B4A013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ReadChapter.xib; sourceTree = "<group>"; };
+		8D8D92890EE0976000B4A013 /* bible_fr.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = bible_fr.db; sourceTree = "<group>"; };
+		8D9265460EF9DD3A007BCFD8 /* Settings.bundle */ = {isa = PBXFileReference; explicitFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8DD0F6270E64E445008AF516 /* Devotional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Devotional.h; path = Classes/Devotional.h; sourceTree = "<group>"; };
 		8DD0F6280E64E445008AF516 /* Devotional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Devotional.m; path = Classes/Devotional.m; sourceTree = "<group>"; };
 		8DD0F6520E64E865008AF516 /* DevotionalNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DevotionalNavController.h; path = Classes/DevotionalNavController.h; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8D7BB54E0E776AE100E23727 /* Cells */,
 				8D7BB54F0E776AEE00E23727 /* Controllers */,
+				8D9265460EF9DD3A007BCFD8 /* Settings.bundle */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D8D92890EE0976000B4A013 /* bible_fr.db */,
 				8D098A850ECA8782009DEE31 /* Info.plist */,
 				8D24210A0EC93430003D1DD3 /* Default.png */,
 				8D2420E60EC92CE0003D1DD3 /* bible_en.db */,
@@ -337,6 +351,7 @@
 				German,
 				en,
 				es,
+				fr,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -373,6 +388,8 @@
 				8D2420B80EC9288B003D1DD3 /* logo9.png in Resources */,
 				8D2420E70EC92CE0003D1DD3 /* bible_en.db in Resources */,
 				8D24210B0EC93430003D1DD3 /* Default.png in Resources */,
+				8D8D928A0EE0976000B4A013 /* bible_fr.db in Resources */,
+				8D9265470EF9DD3A007BCFD8 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +436,7 @@
 			children = (
 				8D7BB4F30E77664E00E23727 /* en */,
 				8D7BB5CB0E77732700E23727 /* es */,
+				8D8D92790EE0931B00B4A013 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -428,6 +446,7 @@
 			children = (
 				8D7BB5F10E77751100E23727 /* en */,
 				8D7BB6050E77754600E23727 /* es */,
+				8D8D927C0EE0936300B4A013 /* fr */,
 			);
 			name = AddBookmark.xib;
 			sourceTree = "<group>";
@@ -437,6 +456,7 @@
 			children = (
 				8D7BB5F30E77751100E23727 /* en */,
 				8D7BB6060E77755700E23727 /* es */,
+				8D8D927B0EE0936300B4A013 /* fr */,
 			);
 			name = AddBookmarkItem.xib;
 			sourceTree = "<group>";
@@ -446,6 +466,7 @@
 			children = (
 				8D7BB5F50E77751100E23727 /* en */,
 				8D7BB6070E77755700E23727 /* es */,
+				8D8D927D0EE0936300B4A013 /* fr */,
 			);
 			name = AddDevotional.xib;
 			sourceTree = "<group>";
@@ -455,6 +476,7 @@
 			children = (
 				8D7BB5F70E77751100E23727 /* en */,
 				8D7BB6080E77755700E23727 /* es */,
+				8D8D927A0EE0936300B4A013 /* fr */,
 			);
 			name = AddFolder.xib;
 			sourceTree = "<group>";
@@ -464,6 +486,7 @@
 			children = (
 				8D7BB5F90E77751100E23727 /* en */,
 				8D7BB6090E77755700E23727 /* es */,
+				8D8D927F0EE0936300B4A013 /* fr */,
 			);
 			name = FindVerse.xib;
 			sourceTree = "<group>";
@@ -473,6 +496,7 @@
 			children = (
 				8D7BB5FB0E77751100E23727 /* en */,
 				8D7BB60A0E77755700E23727 /* es */,
+				8D8D927E0EE0936300B4A013 /* fr */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -482,6 +506,7 @@
 			children = (
 				8D7BB5FD0E77751100E23727 /* en */,
 				8D7BB60B0E77755700E23727 /* es */,
+				8D8D92800EE0936300B4A013 /* fr */,
 			);
 			name = ReadChapter.xib;
 			sourceTree = "<group>";
@@ -515,30 +540,29 @@
 			};
 			name = Release;
 		};
-		8D7FC5680ECD2249007255DD /* Distribution */ = {
+		8D8D92D10EE0B5A000B4A013 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Marcelo Andrade";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7448C95C-4EA3-4DD7-9E50-A445199E8EFE";
 				SDKROOT = iphoneos2.0;
 			};
 			name = Distribution;
 		};
-		8D7FC5690ECD2249007255DD /* Distribution */ = {
+		8D8D92D20EE0B5A000B4A013 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Marcelo Andrade";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GodWord_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = GodWord;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7448C95C-4EA3-4DD7-9E50-A445199E8EFE";
 			};
 			name = Distribution;
 		};
@@ -577,7 +601,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
-				8D7FC5690ECD2249007255DD /* Distribution */,
+				8D8D92D20EE0B5A000B4A013 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -587,7 +611,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
-				8D7FC5680ECD2249007255DD /* Distribution */,
+				8D8D92D10EE0B5A000B4A013 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
