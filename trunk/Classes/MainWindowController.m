@@ -33,7 +33,8 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	//return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 
@@ -47,10 +48,5 @@
 	[super dealloc];
 }
 
-#pragma mark Implement UITabBarDelegate
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    NSLog(@"tab Selected = %d", tabBar.selectedItem.tag );
-}
 
 @end

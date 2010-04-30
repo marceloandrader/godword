@@ -36,6 +36,7 @@
  If you need to do additional setup after loading the view, override viewDidLoad. */
 - (void)viewDidLoad {
 	table.allowsSelectionDuringEditing = YES;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	self.navigationItem.rightBarButtonItem = self.editButtonItem;
 } 
 

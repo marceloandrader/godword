@@ -28,6 +28,7 @@
 	
 	UINavigationController *navControler = [[UINavigationController alloc] initWithRootViewController:bookmarkGroupListController];
 	bookmarkGroupListController.navigationItem.title = NSLocalizedString(@"Folders",@"Folders");
+    navControler.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	
 	//UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:bookmarkGroupListController action:@selector(edit)];
 	

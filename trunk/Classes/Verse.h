@@ -22,7 +22,7 @@
 @property(nonatomic, assign) NSInteger chapterNumber;
 @property(nonatomic, assign) NSInteger verseNumber;
 @property(nonatomic, assign) NSInteger verseId;
-@property(nonatomic, copy)  NSString *text;
+@property(nonatomic, copy)   NSString *text;
 
 - (void) obtainVerseIdWithConnection: (sqlite3*) database;
 

@@ -41,6 +41,7 @@
 	q1.font = [UIFont systemFontOfSize:14];
 	q2.font = [UIFont systemFontOfSize:14];	
 	[self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	GodWordAppDelegate *appDelegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
 	//verse.text = [appDelegate.bible obtainVerseNumber:appDelegate.verseSelected];
 	[btnGoToVerse setTitle:[appDelegate.bible obtainVerseNumber:appDelegate.verseSelected] forState:UIControlStateNormal];

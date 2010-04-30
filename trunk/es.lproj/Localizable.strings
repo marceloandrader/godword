@@ -46,3 +46,7 @@
 "Add new folder" = "Nueva Carpeta";
 
 "bible.db" = "bible_es.db";
+
+/* Version 1.2 */
+
+"verses found" = "versículos encontrados";

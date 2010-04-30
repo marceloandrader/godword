@@ -46,3 +46,7 @@
 "Add new folder" = "Nouveau dossier";
 
 "bible.db" = "bible_fr.db";
+
+/* Version 1.2 */
+
+"verses found" = "versets trouvés";

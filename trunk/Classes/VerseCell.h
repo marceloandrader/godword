@@ -11,10 +11,10 @@
 
 @interface VerseCell : UITableViewCell {
 	UILabel *verseText;
-
+    bool darkColor;
 }
 
 @property(readonly, retain) UILabel *verseText;
-
+@property(nonatomic, assign)    bool darkColor;
 
 @end

@@ -15,12 +15,11 @@
 #import "AddBookmarkController.h"
 #import "AddDevotionalController.h"
 
-#define HEIGHT_ONE_ROW 21
-#define NUM_CHARACTERS_BY_LINE 44
+
 
 @implementation ReadChapterController
 
-@synthesize table, rowTapped;
+@synthesize table, rowTapped, toolBarVisible;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -34,9 +33,10 @@
 
 /* Implement loadView if you want to create a view hierarchy programmatically
  - (void)loadView {
-	 //NSLog(@"load View read chapter");
- }
-*/
+	 self.view.multipleTouchEnabled = YES;
+     
+ } */
+
 
 
 /* If you need to do additional setup after loading the view, override viewDidLoad.
@@ -48,7 +48,8 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	//return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 
@@ -105,6 +106,7 @@
 		book = (Book*) [appDelegate.bible.booksFromNew 
 						objectAtIndex: appDelegate.verseSelected.bookNumber];
 	
+    cell.darkColor = appDelegate.darkView;
 	cell.verseText.text = [NSString stringWithFormat:@"%d. %@", (indexPath.row+1), [appDelegate.bible 
 						   obtainTextVerseInBook:book 
 						   inChapter:appDelegate.verseSelected.chapterNumber 
@@ -278,11 +280,47 @@
 	}
 }
 
+
 -(void)dismiss
 {
 	[self dismissModalViewControllerAnimated:TRUE];
 }
 
+- (IBAction) previousChapter: (id) sender{
 
+    GodWordAppDelegate * appDelegate = 
+        (GodWordAppDelegate*) [[UIApplication sharedApplication] delegate];
+    int verseId = [appDelegate.bible obtainPreviousChapterFromVerse:
+                                     appDelegate.verseSelected];
+
+    if ( verseId != 0 )
+    {
+        [appDelegate.bible refreshVerseFromVerseId:verseId
+                                             verse:appDelegate.verseSelected];
+        [self viewWillAppear:NO];
+    }
+}
+
+- (IBAction) nextChapter: (id) sender{
+    
+    GodWordAppDelegate * appDelegate = 
+        (GodWordAppDelegate*) [[UIApplication sharedApplication] delegate];
+    int verseId = [appDelegate.bible obtainNextChapterFromVerse:
+                                     appDelegate.verseSelected];
+
+    if ( verseId != 0 )
+    {
+        [appDelegate.bible refreshVerseFromVerseId:verseId 
+                                             verse:appDelegate.verseSelected];
+        [self viewWillAppear:NO];
+    }
+}
+
+- (IBAction) changeDarkView: (id) sender{
+    GodWordAppDelegate * appDelegate = 
+    (GodWordAppDelegate*) [[UIApplication sharedApplication] delegate];
+    appDelegate.darkView = ! appDelegate.darkView;
+    [self viewWillAppear:NO];
+}
 
 @end

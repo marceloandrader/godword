@@ -22,6 +22,7 @@ static sqlite3_stmt *obtainVerseText = nil;
 		self.pk = primaryKey;
 		self.title = bookTitle;
 		self.chapters = numChapters;
+        //NSLog(@"title %@, chapters %d", bookTitle, numChapters);
 	}
 	return self;
 }
