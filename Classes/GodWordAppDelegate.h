@@ -16,11 +16,12 @@
 	IBOutlet UITabBarController *tabBarController;
 	BibleDatabase *bible;
 	Verse *verseSelected;
+    bool darkView;
 }
 
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) UITabBarController *tabBarController;
 @property (nonatomic, retain) BibleDatabase *bible;
 @property (nonatomic, retain) Verse * verseSelected;
-
+@property (nonatomic, assign) bool darkView;
 @end

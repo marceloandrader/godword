@@ -20,7 +20,7 @@
 
 @implementation GodWordAppDelegate
 
-@synthesize window, tabBarController, bible, verseSelected;
+@synthesize window, tabBarController, bible, verseSelected, darkView;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {	
     NSString *langSelected = [[NSUserDefaults standardUserDefaults] stringForKey:@"app_language"];
@@ -57,7 +57,7 @@
     endTime = [[[NSDate alloc] init] timeIntervalSince1970] ;
     NSLog(@"initializeDevotionals time %f ", (endTime-initTime));
 
-    
+    darkView = [[NSUserDefaults standardUserDefaults] boolForKey:@"darkView"];
     NSInteger verseId  = [[NSUserDefaults standardUserDefaults] integerForKey:@"verseId"];
 	NSInteger tabSelected  = [[NSUserDefaults standardUserDefaults] integerForKey:@"tabSelected"];
     
@@ -66,31 +66,41 @@
 	if (verseId==0) {
 		if ([self.bible.bibleName isEqual:@"bible_fr.db"])
 			verseId = 262070;
-		else
-			verseId = 261370;
+		else {
+            if ([self.bible.bibleName isEqual:@"bible_pt.db"]) {
+                verseId = 57239;
+            }else
+            {
+                verseId = 261370; //english & spanish
+            }
+        }
 	}
 	[bible refreshVerseFromVerseId:verseId verse:verse];
 	tabBarController.selectedIndex = tabSelected;
 	verseSelected = verse;
 	[verse release];
 	
-	[window addSubview: tabBarController.view];
-	[window makeKeyAndVisible];
+	//[tabBarController viewWillAppear:NO];
+	[window addSubview: [tabBarController view]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
 	// save the drill-down hierarchy of selections to preferences
 	[self.bible refreshVerseId:self.verseSelected];
-	[[NSUserDefaults standardUserDefaults] setInteger:self.verseSelected.verseId forKey:@"verseId"];
-	[[NSUserDefaults standardUserDefaults] setInteger:self.tabBarController.selectedIndex  forKey:@"tabSelected"];
+    [[NSUserDefaults standardUserDefaults] setBool:darkView forKey:@"darkView"];
+	[[NSUserDefaults standardUserDefaults] setInteger:self.verseSelected.verseId 
+                                               forKey:@"verseId"];
+	[[NSUserDefaults standardUserDefaults] setInteger:self.tabBarController.selectedIndex  
+                                               forKey:@"tabSelected"];
 
     [Book finalizeStatements];
 	[Verse finalizeStatements];
 	[BookmarkFolder finalizeStatements];
 	[Bookmark finalizeStatements];
 	[Devotional finalizeStatements];
-}	
+}
+
 
 - (void)dealloc {
 	[bible release];

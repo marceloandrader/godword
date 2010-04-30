@@ -15,6 +15,7 @@
 static sqlite3_stmt *obtainVerseId = nil;
 static sqlite3_stmt *obtainVerse = nil;
 
+
 @implementation Verse
 @synthesize testament, bookNumber, chapterNumber, verseNumber, verseId, text;
 
@@ -61,7 +62,7 @@ static sqlite3_stmt *obtainVerse = nil;
 - (void) obtainVerseFromVerseId:(NSInteger) verseIdQuery withConnection:(sqlite3 *) database
 {
 	if (obtainVerse == nil) {
-        static char *sql = "select bo.testament, v.chapter_no, v.verse_no, bo.id from verses v, books bo where bo.id = v.book_id and v.id = ?";
+        static char *sql = "select bo.testament, v.chapter_no, v.verse_no, bo.id, v.verse from verses v, books bo where bo.id = v.book_id and v.id = ?";
 		
         if (sqlite3_prepare_v2(database, sql, -1, &obtainVerse, NULL) != SQLITE_OK) {
             NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
@@ -79,6 +80,8 @@ static sqlite3_stmt *obtainVerse = nil;
 		self.chapterNumber = sqlite3_column_int(obtainVerse, 1);
 		self.verseNumber = sqlite3_column_int(obtainVerse, 2);
 		NSString * bookId = [NSString stringWithUTF8String:(char *)sqlite3_column_text(obtainVerse, 3)] ;
+        
+        self.text = [NSString stringWithUTF8String:(char *)sqlite3_column_text(obtainVerse, 4)] ;
 		
 	GodWordAppDelegate *delegate = (GodWordAppDelegate*)[[UIApplication sharedApplication] delegate];
 		NSMutableArray *array;

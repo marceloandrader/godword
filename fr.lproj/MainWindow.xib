@@ -45,10 +45,10 @@
 				<object class="IBUIViewController" key="IBUISelectedViewController" id="732457737">
 					<string key="IBUITitle">Chercher Verset</string>
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="583148869">
-						<string key="IBUITitle">Chercher</string>
+						<string key="IBUITitle">Index</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">FindButton.png</string>
+							<string key="NSResourceName">find_button_new.png</string>
 						</object>
 						<reference key="IBUITabBar"/>
 					</object>
@@ -89,6 +89,14 @@
 							<reference key="IBUITabBar"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="607491325"/>
+					</object>
+					<object class="IBUIViewController" id="459023794">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="49447416">
+							<int key="IBUISystemItemIdentifier">8</int>
+							<reference key="IBUITabBar"/>
+						</object>
+						<reference key="IBUIParentViewController" ref="607491325"/>
+						<string key="IBUINibName">SearchWord</string>
 					</object>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="960419818">
@@ -176,6 +184,7 @@
 							<reference ref="879252677"/>
 							<reference ref="837627981"/>
 							<reference ref="224900944"/>
+							<reference ref="459023794"/>
 						</object>
 						<reference key="parent" ref="957960031"/>
 					</object>
@@ -240,6 +249,20 @@
 						<reference key="object" ref="774985437"/>
 						<reference key="parent" ref="224900944"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">50</int>
+						<reference key="object" ref="459023794"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="49447416"/>
+						</object>
+						<reference key="parent" ref="607491325"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">49</int>
+						<reference key="object" ref="49447416"/>
+						<reference key="parent" ref="459023794"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -265,6 +288,8 @@
 					<string>39.CustomClassName</string>
 					<string>47.IBPluginDependency</string>
 					<string>48.CustomClassName</string>
+					<string>49.IBPluginDependency</string>
+					<string>50.CustomClassName</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -295,6 +320,8 @@
 					<string>BookmarkListController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>DevotionalNavController</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>SearchController</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -317,7 +344,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -415,6 +442,44 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/ReadChapterController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SearchController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>nextPage:</string>
+							<string>previousPage:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>activity</string>
+							<string>pageItem</string>
+							<string>searchBar</string>
+							<string>table</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIActivityIndicatorView</string>
+							<string>UIBarButtonItem</string>
+							<string>UISearchBar</string>
+							<string>UITableView</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/SearchController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

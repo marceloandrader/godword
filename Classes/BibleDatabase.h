@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
+#define PAGE_FOUND_SIZE 10
+
 @class Book;
 @class Bookmark;
 @class Verse;
@@ -20,6 +22,8 @@
 	NSMutableArray *booksFromNew;
 	NSMutableArray *bookmarkFolders;
 	NSMutableArray *devotionals;
+    NSMutableArray *versesFound;
+    NSInteger page;
     NSString *bibleName;
 }
 
@@ -27,6 +31,8 @@
 @property (nonatomic, retain) NSMutableArray *booksFromNew;
 @property (nonatomic, retain) NSMutableArray *bookmarkFolders;
 @property (nonatomic, retain) NSMutableArray *devotionals;
+@property (nonatomic, retain) NSMutableArray *versesFound;
+@property (nonatomic, assign) NSInteger page;
 @property (nonatomic, retain) NSString *bibleName;
 
 - (void) createEditableCopyOfDatabaseIfNeeded ;
@@ -58,6 +64,8 @@
 
 - (void) initializeDevotionals;
 
+- (void) searchWord:(NSString*) word;
+
 - (void) saveDevotional:(Devotional *) devotional; 
 
 - (NSString*) obtainVerseNumber:(Verse*) verseSelected;
@@ -65,4 +73,7 @@
 - (NSString*) obtainVerseText:(Verse *) verseSelected;
 
 - (void) deleteDevotional:(Devotional *)devotional;
+
+- (NSInteger) obtainNextChapterFromVerse:(Verse*) verse ;
+- (NSInteger) obtainPreviousChapterFromVerse:(Verse*) verse ;
 @end

@@ -7,9 +7,9 @@
 		);
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Distribution;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 8D731F3F0E33EBD20031200B /* GodWord */;
-		activeSDKPreference = iphoneos2.0;
+		activeSDKPreference = iphonesimulator3.1;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GodWord */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* GodWord */,
@@ -51,7 +51,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					22,
 					300,
-					277,
+					276,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXExecutablesDataSource_ActiveFlagID,
@@ -61,10 +61,10 @@
 			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
-				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Path_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					511,
+					533,
 					20,
 					48,
 					43,
@@ -83,11 +83,11 @@
 			};
 			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
-				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_SCM_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
 					20,
-					529,
+					509,
 					20,
 					48,
 					43,
@@ -110,7 +110,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					471,
+					504,
 					60,
 					20,
 					48,
@@ -127,14 +127,31 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 252798257;
-			PBXWorkspaceStateSaveDate = 252798257;
+			PBXPerProjectTemplateStateSaveDate = 274932707;
+			PBXWorkspaceStateSaveDate = 274932707;
 		};
 		perUserProjectItems = {
-			8D7BC5610F11653E000F768F /* PBXTextBookmark */ = 8D7BC5610F11653E000F768F /* PBXTextBookmark */;
-			8D8E2FE90EFB50F600614FCB = 8D8E2FE90EFB50F600614FCB /* PBXTextBookmark */;
-			8D9E1C4B0F01C3A4005590FA = 8D9E1C4B0F01C3A4005590FA /* PBXTextBookmark */;
-			8DF7154A0EC944AE0067852D = 8DF7154A0EC944AE0067852D /* PlistBookmark */;
+			8D51E58B0FFC620600C0F32F /* PBXTextBookmark */ = 8D51E58B0FFC620600C0F32F /* PBXTextBookmark */;
+			8D51E58D0FFC620600C0F32F /* PlistBookmark */ = 8D51E58D0FFC620600C0F32F /* PlistBookmark */;
+			8D74D78F10632669001798E3 /* PBXTextBookmark */ = 8D74D78F10632669001798E3 /* PBXTextBookmark */;
+			8D74D79010632669001798E3 /* PBXBookmark */ = 8D74D79010632669001798E3 /* PBXBookmark */;
+			8D74D79110632669001798E3 /* PBXBookmark */ = 8D74D79110632669001798E3 /* PBXBookmark */;
+			8D74D79210632669001798E3 /* PBXBookmark */ = 8D74D79210632669001798E3 /* PBXBookmark */;
+			8D74D79310632669001798E3 /* PlistBookmark */ = 8D74D79310632669001798E3 /* PlistBookmark */;
+			8D74D79410632669001798E3 /* PBXBookmark */ = 8D74D79410632669001798E3 /* PBXBookmark */;
+			8D74D79510632669001798E3 /* PBXTextBookmark */ = 8D74D79510632669001798E3 /* PBXTextBookmark */;
+			8D74D79610632669001798E3 /* PBXBookmark */ = 8D74D79610632669001798E3 /* PBXBookmark */;
+			8D74D79710632669001798E3 /* PBXBookmark */ = 8D74D79710632669001798E3 /* PBXBookmark */;
+			8D74D79810632669001798E3 /* PBXBookmark */ = 8D74D79810632669001798E3 /* PBXBookmark */;
+			8D74D79910632669001798E3 /* PlistBookmark */ = 8D74D79910632669001798E3 /* PlistBookmark */;
+			8D74D79A10632669001798E3 /* PBXTextBookmark */ = 8D74D79A10632669001798E3 /* PBXTextBookmark */;
+			8D7CE6CA0F6DCCC60084AD5F /* PBXTextBookmark */ = 8D7CE6CA0F6DCCC60084AD5F /* PBXTextBookmark */;
+			8D7CE6CD0F6DCCC60084AD5F /* PBXTextBookmark */ = 8D7CE6CD0F6DCCC60084AD5F /* PBXTextBookmark */;
+			8D7D12200F71E37700522E7D /* PlistBookmark */ = 8D7D12200F71E37700522E7D /* PlistBookmark */;
+			8D7D12280F71E3C800522E7D /* PBXTextBookmark */ = 8D7D12280F71E3C800522E7D /* PBXTextBookmark */;
+			8D7D122F0F71E40A00522E7D /* PlistBookmark */ = 8D7D122F0F71E40A00522E7D /* PlistBookmark */;
+			8D8A1B290F73347A00B3C026 /* PBXTextBookmark */ = 8D8A1B290F73347A00B3C026 /* PBXTextBookmark */;
+			8D8FE8760F7DB2BC005273CA /* PBXTextBookmark */ = 8D8FE8760F7DB2BC005273CA /* PBXTextBookmark */;
 		};
 		sourceControlManager = 8D731F4A0E33EBD70031200B /* Source Control */;
 		userBuildSettings = {
@@ -149,7 +166,7 @@
 	};
 	32CA4F630368D1EE00C91783 /* GodWord_Prefix.pch */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 355}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 175}";
 		};
@@ -168,104 +185,130 @@
 	};
 	8D0BB0310E7618A7008955DD /* BookmarksOfFolderController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 2436}}";
-			sepNavSelRange = "{1636, 110}";
-			sepNavVisRange = "{1561, 909}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 2366}}";
+			sepNavSelRange = "{3317, 143}";
+			sepNavVisRange = "{2535, 1243}";
+		};
+	};
+	8D24210A0EC93430003D1DD3 /* Default.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 63}, {785, 710}}";
 		};
 	};
 	8D51C52B0E3404CA004F21B9 /* MainWindowController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
-			sepNavSelRange = "{316, 0}";
-			sepNavVisRange = "{0, 316}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 445}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 229}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
 	8D51C52C0E3404CA004F21B9 /* MainWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 798}}";
-			sepNavSelRange = "{1118, 0}";
-			sepNavVisRange = "{603, 640}";
+			sepNavIntBoundsRect = "{{0, 0}, {711, 742}}";
+			sepNavSelRange = "{852, 0}";
+			sepNavVisRange = "{412, 677}";
 		};
 	};
 	8D51C5330E340579004F21B9 /* GodWordAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
-			sepNavSelRange = "{365, 0}";
-			sepNavVisRange = "{0, 617}";
+			sepNavIntBoundsRect = "{{0, 0}, {566, 392}}";
+			sepNavSelRange = "{659, 0}";
+			sepNavVisRange = "{86, 594}";
 		};
 	};
 	8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 1470}}";
-			sepNavSelRange = "{2461, 16}";
-			sepNavVisRange = "{1512, 1037}";
+			sepNavIntBoundsRect = "{{0, 0}, {722, 1554}}";
+			sepNavSelRange = "{1439, 18}";
+			sepNavVisRange = "{579, 1546}";
 			sepNavWindowFrame = "{{317, 130}, {750, 558}}";
 		};
 	};
 	8D51C5600E3406B3004F21B9 /* FindVerseController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {655, 482}}";
-			sepNavSelRange = "{402, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {962, 471}}";
+			sepNavSelRange = "{420, 38}";
 			sepNavVisRange = "{0, 508}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
 	8D51C5610E3406B3004F21B9 /* FindVerseController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 2744}}";
-			sepNavSelRange = "{4554, 0}";
-			sepNavVisRange = "{4527, 786}";
+			sepNavIntBoundsRect = "{{0, 0}, {962, 2954}}";
+			sepNavSelRange = "{2717, 0}";
+			sepNavVisRange = "{2587, 1098}";
 			sepNavWindowFrame = "{{218, 134}, {750, 558}}";
 		};
 	};
 	8D51C5980E34092C004F21B9 /* BibleDatabase.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 980}}";
-			sepNavSelRange = "{777, 0}";
-			sepNavVisRange = "{38, 790}";
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1120}}";
+			sepNavSelRange = "{1512, 0}";
+			sepNavVisRange = "{1239, 804}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
 	8D51C5990E34092C004F21B9 /* BibleDatabase.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 3668}}";
-			sepNavSelRange = "{688, 1}";
-			sepNavVisRange = "{157, 1043}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 6510}}";
+			sepNavSelRange = "{1883, 0}";
+			sepNavVisRange = "{1805, 689}";
 			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
 		};
 	};
 	8D51C6120E340FBD004F21B9 /* Book.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {655, 504}}";
-			sepNavSelRange = "{742, 28}";
+			sepNavIntBoundsRect = "{{0, 0}, {962, 504}}";
+			sepNavSelRange = "{299, 2}";
 			sepNavVisRange = "{14, 763}";
 			sepNavWindowFrame = "{{1001, 184}, {750, 558}}";
 		};
 	};
 	8D51C6130E340FBD004F21B9 /* Book.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {804, 1386}}";
-			sepNavSelRange = "{2537, 0}";
-			sepNavVisRange = "{1459, 1090}";
+			sepNavIntBoundsRect = "{{0, 0}, {962, 1400}}";
+			sepNavSelRange = "{544, 0}";
+			sepNavVisRange = "{72, 1059}";
 			sepNavWindowFrame = "{{526, 82}, {750, 558}}";
 		};
 	};
 	8D51C64A0E341202004F21B9 /* ReadChapterController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {630, 434}}";
-			sepNavSelRange = "{340, 0}";
-			sepNavVisRange = "{3, 994}";
+			sepNavIntBoundsRect = "{{0, 0}, {566, 546}}";
+			sepNavSelRange = "{1257, 0}";
+			sepNavVisRange = "{377, 886}";
 			sepNavWindowFrame = "{{61, 173}, {750, 558}}";
 		};
 	};
 	8D51C64B0E341202004F21B9 /* ReadChapterController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 4144}}";
-			sepNavSelRange = "{6463, 91}";
-			sepNavVisRange = "{6459, 1152}";
+			sepNavIntBoundsRect = "{{0, 0}, {722, 4928}}";
+			sepNavSelRange = "{1181, 0}";
+			sepNavVisRange = "{759, 757}";
 			sepNavWindowFrame = "{{414, 118}, {750, 558}}";
 		};
+	};
+	8D51E58B0FFC620600C0F32F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D51C64B0E341202004F21B9 /* ReadChapterController.m */;
+		name = "ReadChapterController.m: 51";
+		rLen = 0;
+		rLoc = 1181;
+		rType = 0;
+		vrLen = 757;
+		vrLoc = 759;
+	};
+	8D51E58D0FFC620600C0F32F /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D8A1B0D0F732EB100B3C026 /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/marceloandrade/Documents/Proyectos/Datos GodWord/GodWord/Entitlements.plist";
+		rLen = 0;
+		rLoc = 2147483647;
 	};
 	8D650E2F0E5BCE09004536A2 /* AddFolderController.h */ = {
 		uiCtxt = {
@@ -316,25 +359,106 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryName = GodsWord;
 		};
 	};
 	8D731F4B0E33EBD70031200B /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	8D74D78F10632669001798E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D51C52C0E3404CA004F21B9 /* MainWindowController.m */;
+		name = "MainWindowController.m: 37";
+		rLen = 0;
+		rLoc = 852;
+		rType = 0;
+		vrLen = 677;
+		vrLoc = 412;
+	};
+	8D74D79010632669001798E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8DA1F5720F89207C00F47B37 /* change-background.png */;
+	};
+	8D74D79110632669001798E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D9242F70F143D9E00FB7299 /* find_button_new.png */;
+	};
+	8D74D79210632669001798E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D7CE6BD0F6DCB640084AD5F /* foco.png */;
+	};
+	8D74D79310632669001798E3 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D8A1B0D0F732EB100B3C026 /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/marceloandrade/Documents/Proyectos/Datos GodWord/GodWord/Entitlements.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8D74D79410632669001798E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D51C5980E34092C004F21B9 /* BibleDatabase.h */;
+	};
+	8D74D79510632669001798E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D51C52C0E3404CA004F21B9 /* MainWindowController.m */;
+		name = "MainWindowController.m: 37";
+		rLen = 0;
+		rLoc = 852;
+		rType = 0;
+		vrLen = 677;
+		vrLoc = 412;
+	};
+	8D74D79610632669001798E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8DA1F5720F89207C00F47B37 /* change-background.png */;
+	};
+	8D74D79710632669001798E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D9242F70F143D9E00FB7299 /* find_button_new.png */;
+	};
+	8D74D79810632669001798E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D7CE6BD0F6DCB640084AD5F /* foco.png */;
+	};
+	8D74D79910632669001798E3 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D8A1B0D0F732EB100B3C026 /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/marceloandrade/Documents/Proyectos/Datos GodWord/GodWord/Entitlements.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8D74D79A10632669001798E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D51C5980E34092C004F21B9 /* BibleDatabase.h */;
+		name = "BibleDatabase.h: 59";
+		rLen = 0;
+		rLoc = 1512;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 1239;
+	};
 	8D75037F0E4E846300BF500F /* BookmarkFolder.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {655, 504}}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 490}}";
 			sepNavSelRange = "{385, 0}";
-			sepNavVisRange = "{0, 629}";
+			sepNavVisRange = "{0, 577}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
 	8D7503800E4E846300BF500F /* BookmarkFolder.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 2044}}";
-			sepNavSelRange = "{1014, 0}";
-			sepNavVisRange = "{640, 1451}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 1988}}";
+			sepNavSelRange = "{1768, 12}";
+			sepNavVisRange = "{767, 1382}";
 		};
 	};
 	8D7503FE0E4E8C5500BF500F /* AddBookmarkItemController.h */ = {
@@ -354,16 +478,16 @@
 	};
 	8D75933F0E3FF84000BD8777 /* VerseCell.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {567, 391}}";
-			sepNavSelRange = "{268, 0}";
-			sepNavVisRange = "{0, 274}";
+			sepNavIntBoundsRect = "{{0, 0}, {566, 310}}";
+			sepNavSelRange = "{315, 0}";
+			sepNavVisRange = "{0, 340}";
 		};
 	};
 	8D7593400E3FF84000BD8777 /* VerseCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {567, 994}}";
-			sepNavSelRange = "{1672, 0}";
-			sepNavVisRange = "{1236, 464}";
+			sepNavIntBoundsRect = "{{0, 0}, {566, 1274}}";
+			sepNavSelRange = "{1898, 0}";
+			sepNavVisRange = "{2083, 361}";
 		};
 	};
 	8D7604350E664DC70028B85F /* EditTextViewController.h */ = {
@@ -376,24 +500,24 @@
 	};
 	8D7604360E664DC70028B85F /* EditTextViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 2492}}";
-			sepNavSelRange = "{3890, 102}";
-			sepNavVisRange = "{3799, 674}";
+			sepNavIntBoundsRect = "{{0, 0}, {655, 2520}}";
+			sepNavSelRange = "{726, 23}";
+			sepNavVisRange = "{569, 830}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
 	8D76049E0E6655A10028B85F /* CellTextView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
+			sepNavIntBoundsRect = "{{0, 0}, {566, 310}}";
 			sepNavSelRange = "{323, 0}";
 			sepNavVisRange = "{0, 361}";
 		};
 	};
 	8D76049F0E6655A10028B85F /* CellTextView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 1134}}";
-			sepNavSelRange = "{110, 0}";
-			sepNavVisRange = "{0, 574}";
+			sepNavIntBoundsRect = "{{0, 0}, {566, 1092}}";
+			sepNavSelRange = "{64, 0}";
+			sepNavVisRange = "{1362, 518}";
 		};
 	};
 	8D7827F10E58FFE100378BFF /* BookmarkGroupListController.h */ = {
@@ -405,9 +529,9 @@
 	};
 	8D7827F20E58FFE100378BFF /* BookmarkGroupListController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 1918}}";
-			sepNavSelRange = "{2010, 0}";
-			sepNavVisRange = "{1896, 1089}";
+			sepNavIntBoundsRect = "{{0, 0}, {655, 1890}}";
+			sepNavSelRange = "{3412, 0}";
+			sepNavVisRange = "{2936, 1011}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
@@ -420,9 +544,9 @@
 	};
 	8D7829180E590E7A00378BFF /* BookmarkCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {567, 1050}}";
+			sepNavIntBoundsRect = "{{0, 0}, {698, 1022}}";
 			sepNavSelRange = "{1538, 403}";
-			sepNavVisRange = "{1485, 550}";
+			sepNavVisRange = "{1424, 611}";
 			sepNavWindowFrame = "{{536, 54}, {737, 713}}";
 		};
 	};
@@ -436,86 +560,164 @@
 	};
 	8D79AE750E5521EA00CAC6DF /* BookmarkListController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {731, 1050}}";
-			sepNavSelRange = "{1084, 0}";
-			sepNavVisRange = "{1030, 663}";
+			sepNavIntBoundsRect = "{{0, 0}, {655, 1036}}";
+			sepNavSelRange = "{1005, 0}";
+			sepNavVisRange = "{303, 1136}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
 	8D7BB4F30E77664E00E23727 /* en */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {822, 672}}";
-			sepNavSelRange = "{0, 764}";
-			sepNavVisRange = "{128, 636}";
+			sepNavIntBoundsRect = "{{0, 0}, {962, 728}}";
+			sepNavSelRange = "{759, 0}";
+			sepNavVisRange = "{237, 580}";
 			sepNavWindowFrame = "{{180, 61}, {737, 713}}";
 		};
 	};
 	8D7BB5CB0E77732700E23727 /* es */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {822, 700}}";
-			sepNavSelRange = "{315, 0}";
-			sepNavVisRange = "{0, 636}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 728}}";
+			sepNavSelRange = "{866, 0}";
+			sepNavVisRange = "{399, 469}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
-	8D7BC5610F11653E000F768F /* PBXTextBookmark */ = {
+	8D7BC56B0F1166D8000F768F /* SearchController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 597}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 598}";
+			sepNavWindowFrame = "{{15, 63}, {785, 710}}";
+		};
+	};
+	8D7BC56C0F1166D8000F768F /* SearchController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 2940}}";
+			sepNavSelRange = "{1176, 0}";
+			sepNavVisRange = "{0, 1172}";
+		};
+	};
+	8D7CB67C0F69FD890007C7DA /* pt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {962, 742}}";
+			sepNavSelRange = "{794, 0}";
+			sepNavVisRange = "{238, 626}";
+			sepNavWindowFrame = "{{15, 63}, {785, 710}}";
+		};
+	};
+	8D7CE6CA0F6DCCC60084AD5F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 8D76049F0E6655A10028B85F /* CellTextView.m */;
-		name = "CellTextView.m: 6";
+		fRef = 8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */;
+		name = "GodWordAppDelegate.m: 90";
 		rLen = 0;
-		rLoc = 110;
+		rLoc = 3053;
 		rType = 0;
-		vrLen = 574;
-		vrLoc = 0;
+		vrLen = 677;
+		vrLoc = 2696;
+	};
+	8D7CE6CD0F6DCCC60084AD5F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D51C64B0E341202004F21B9 /* ReadChapterController.m */;
+		name = "ReadChapterController.m: 109";
+		rLen = 0;
+		rLoc = 3233;
+		rType = 0;
+		vrLen = 836;
+		vrLoc = 2650;
+	};
+	8D7D120F0F71E16D00522E7D /* Root.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = Root.plist;
+		path = "/Users/marceloandrade/Documents/Proyectos/Datos GodWord/GodWord/Settings.bundle/Root.plist";
+		sourceTree = "<absolute>";
+	};
+	8D7D12200F71E37700522E7D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D7D120F0F71E16D00522E7D /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			0,
+			DefaultValue,
+		);
+		name = "/Users/marceloandrade/Documents/Proyectos/Datos GodWord/GodWord/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8D7D12280F71E3C800522E7D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D51C5990E34092C004F21B9 /* BibleDatabase.m */;
+		name = "BibleDatabase.m: 323";
+		rLen = 0;
+		rLoc = 12271;
+		rType = 0;
+		vrLen = 1088;
+		vrLoc = 11035;
+	};
+	8D7D122F0F71E40A00522E7D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D7D120F0F71E16D00522E7D /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			0,
+			Values,
+		);
+		name = "/Users/marceloandrade/Documents/Proyectos/Datos GodWord/GodWord/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
 	};
 	8D89588F0E5114BB00BFF4DA /* Bookmark.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {655, 546}}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 546}}";
 			sepNavSelRange = "{802, 51}";
-			sepNavVisRange = "{30, 860}";
+			sepNavVisRange = "{204, 686}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
 	8D8958900E5114BB00BFF4DA /* Bookmark.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {630, 1274}}";
-			sepNavSelRange = "{470, 0}";
-			sepNavVisRange = "{1620, 775}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 1218}}";
+			sepNavSelRange = "{1195, 20}";
+			sepNavVisRange = "{650, 838}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
+	8D8A1B290F73347A00B3C026 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D51C5340E340579004F21B9 /* GodWordAppDelegate.m */;
+		name = "GodWordAppDelegate.m: 46";
+		rLen = 18;
+		rLoc = 1439;
+		rType = 0;
+		vrLen = 1546;
+		vrLoc = 579;
+	};
 	8D8D92790EE0931B00B4A013 /* fr */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {822, 672}}";
-			sepNavSelRange = "{554, 0}";
-			sepNavVisRange = "{137, 668}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 728}}";
+			sepNavSelRange = "{612, 0}";
+			sepNavVisRange = "{393, 468}";
 		};
 	};
-	8D8E2FE90EFB50F600614FCB /* PBXTextBookmark */ = {
+	8D8FE8760F7DB2BC005273CA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 8D76049F0E6655A10028B85F /* CellTextView.m */;
-		name = "CellTextView.m: 75";
-		rLen = 2;
-		rLoc = 1872;
-		rType = 0;
-		vrLen = 544;
-		vrLoc = 1336;
-	};
-	8D9E1C4B0F01C3A4005590FA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 8D76049F0E6655A10028B85F /* CellTextView.m */;
-		name = "CellTextView.m: 6";
+		fRef = 8D51C5990E34092C004F21B9 /* BibleDatabase.m */;
+		name = "BibleDatabase.m: 61";
 		rLen = 0;
-		rLoc = 110;
+		rLoc = 1980;
 		rType = 0;
-		vrLen = 574;
-		vrLoc = 0;
+		vrLen = 1559;
+		vrLoc = 1930;
 	};
 	8DD0F6270E64E445008AF516 /* Devotional.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {655, 518}}";
 			sepNavSelRange = "{817, 0}";
-			sepNavVisRange = "{3, 851}";
+			sepNavVisRange = "{78, 776}";
 		};
 	};
 	8DD0F6280E64E445008AF516 /* Devotional.m */ = {
@@ -527,31 +729,31 @@
 	};
 	8DD0F6520E64E865008AF516 /* DevotionalNavController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {655, 387}}";
+			sepNavIntBoundsRect = "{{0, 0}, {823, 355}}";
 			sepNavSelRange = "{308, 0}";
 			sepNavVisRange = "{0, 317}";
 		};
 	};
 	8DD0F6530E64E865008AF516 /* DevotionalNavController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {804, 980}}";
-			sepNavSelRange = "{878, 0}";
-			sepNavVisRange = "{256, 1000}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 1050}}";
+			sepNavSelRange = "{1494, 91}";
+			sepNavVisRange = "{1210, 677}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
 	8DD0F6550E64E87A008AF516 /* DevotionalListController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 383}}";
-			sepNavSelRange = "{336, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 355}}";
+			sepNavSelRange = "{224, 42}";
 			sepNavVisRange = "{0, 349}";
 		};
 	};
 	8DD0F6560E64E87A008AF516 /* DevotionalListController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 2716}}";
-			sepNavSelRange = "{3685, 0}";
-			sepNavVisRange = "{3419, 1312}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 2814}}";
+			sepNavSelRange = "{3710, 0}";
+			sepNavVisRange = "{4069, 1141}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
@@ -572,17 +774,17 @@
 	};
 	8DD0F71C0E64F87B008AF516 /* AddDevotionalController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 602}}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 616}}";
 			sepNavSelRange = "{497, 0}";
-			sepNavVisRange = "{140, 548}";
+			sepNavVisRange = "{33, 654}";
 			sepNavWindowFrame = "{{758, 53}, {737, 713}}";
 		};
 	};
 	8DD0F71D0E64F87B008AF516 /* AddDevotionalController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 2324}}";
-			sepNavSelRange = "{4714, 0}";
-			sepNavVisRange = "{3658, 1106}";
+			sepNavIntBoundsRect = "{{0, 0}, {655, 2310}}";
+			sepNavSelRange = "{1137, 0}";
+			sepNavVisRange = "{773, 1192}";
 			sepNavWindowFrame = "{{15, 60}, {737, 713}}";
 		};
 	};
@@ -593,28 +795,18 @@
 	};
 	8DDCE8070E36CD1100ECAF65 /* Verse.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 476}}";
-			sepNavSelRange = "{692, 88}";
-			sepNavVisRange = "{3, 778}";
+			sepNavIntBoundsRect = "{{0, 0}, {579, 476}}";
+			sepNavSelRange = "{166, 0}";
+			sepNavVisRange = "{0, 818}";
 			sepNavWindowFrame = "{{35, 39}, {737, 713}}";
 		};
 	};
 	8DDCE8080E36CD1100ECAF65 /* Verse.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1033, 1694}}";
-			sepNavSelRange = "{1774, 0}";
-			sepNavVisRange = "{1640, 571}";
+			sepNavIntBoundsRect = "{{0, 0}, {579, 1792}}";
+			sepNavSelRange = "{318, 0}";
+			sepNavVisRange = "{0, 842}";
 		};
-	};
-	8DF7154A0EC944AE0067852D /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/marceloandrade/Documents/GodWord/Info.plist;
-		rLen = 0;
-		rLoc = 2147483647;
 	};
 	8DFDA1010E4943500049F120 /* AddBookmarkController.h */ = {
 		uiCtxt = {
@@ -625,9 +817,9 @@
 	};
 	8DFDA1020E4943500049F120 /* AddBookmarkController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {689, 3066}}";
-			sepNavSelRange = "{3426, 101}";
-			sepNavVisRange = "{3174, 1069}";
+			sepNavIntBoundsRect = "{{0, 0}, {655, 3178}}";
+			sepNavSelRange = "{948, 0}";
+			sepNavVisRange = "{586, 698}";
 			sepNavWindowFrame = "{{350, 120}, {750, 558}}";
 		};
 	};

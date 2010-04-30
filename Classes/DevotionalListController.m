@@ -125,6 +125,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {	
 	NSDateFormatter *formatter;
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
 	formatter = [[NSDateFormatter alloc] init];
 	[formatter setDateStyle:NSDateFormatterMediumStyle];

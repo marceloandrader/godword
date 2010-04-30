@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MainWindowController : UIViewController <UITabBarDelegate> {
+@interface MainWindowController : UIViewController  {
 
 }
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
+
 
 @end

@@ -16,18 +16,20 @@
 			<key>Key</key>
 			<string>app_language</string>
 			<key>DefaultValue</key>
-			<string>en</string>
+			<string>es</string>
 			<key>Values</key>
 			<array>
 				<string>en</string>
 				<string>es</string>
 				<string>fr</string>
+				<string>pt</string>
 			</array>
 			<key>Titles</key>
 			<array>
 				<string>English</string>
 				<string>Español</string>
 				<string>Français</string>
+				<string>Português</string>
 			</array>
 		</dict>
 	</array>
